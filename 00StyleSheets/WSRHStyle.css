@@ -292,7 +292,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 /*---------------------------------NOTEBOOK 1920px BRANCO---------------------------------*/
 @media only screen and ( min-width : 1920px ) { body { background: #ffffff;}
 #BARRASUPERIOR { position: fixed; background: white; gap: ; max-width: ; width: 102%; opacity: 100%; padding-bottom: 0%; top: 0%; margin-left: -2%;}
-#BARRAIMAGEM { display: inline; position: absolute; float: left; gap: ; max-width: ; width: 3%; left: 2%; border: 2px groove#e2e7f0; border-radius: 50%; margin-top: 0.5%;}
+#BARRAIMAGEM { display: inline; position: absolute; float: left; gap: ; max-width: ; width: 3%; left: 1%; border: 2px groove#e2e7f0; border-radius: 50%; margin-top: 0.5%;}
 #BARRACHAMADA { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 6%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
 #BARRACRIACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
 #BARRAATUALIZACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
