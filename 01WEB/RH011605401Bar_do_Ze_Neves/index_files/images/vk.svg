@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="75mm"
+   height="80mm"
+   viewBox="0 0 75 80"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.1 (3bf5ae0, 2021-09-20)"
+   sodipodi:docname="vk.svg"
+   inkscape:export-filename="/home/rafael/Documents/202WEB/202016401Revista/index_files/images/comercio.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="136.78571"
+     inkscape:cy="145.71429"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217)">
+    <rect
+       ry="17.698029"
+       y="219.39169"
+       x="2.3916893"
+       height="75.216621"
+       width="70.216621"
+       id="rect10"
+       style="fill:#ffffff;fill-opacity:1;stroke:#cccccc;stroke-width:4.783;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
+    <g
+       aria-label="vk"
+       transform="matrix(0.89517107,0,0,0.91809377,0.97451601,46.395476)"
+       id="text14613"
+       style="font-size:67.7619px;line-height:1.25;letter-spacing:0px;word-spacing:0px;fill:#cccccc;stroke-width:1.69405">
+      <path
+         d="M 19.722347,251.31737 5.9666805,214.99699 h 6.3696185 l 7.724857,21.41276 q 0.542095,1.49076 1.151952,3.32033 0.609858,1.82957 1.084191,3.52362 0.474333,1.62629 0.677619,2.77824 h 0.271047 q 0.271048,-1.15195 0.745381,-2.846 0.542096,-1.69405 1.151953,-3.52362 0.677619,-1.82957 1.151952,-3.25257 l 7.724857,-21.41276 h 6.369619 l -13.823428,36.32038 z"
+         id="path19870" />
+      <path
+         d="m 52.044736,199.81832 v 26.90148 q 0,1.08419 -0.135524,2.846 -0.06776,1.76181 -0.135524,3.04928 h 0.271048 q 0.406571,-0.54209 1.219714,-1.55852 0.813143,-1.01643 1.626285,-2.03286 0.880905,-1.08419 1.490762,-1.76181 l 11.587286,-12.2649 h 6.979475 l -14.704332,15.51747 15.720761,20.80291 h -7.182762 l -12.603713,-16.94048 -4.133476,3.59138 v 13.3491 H 46.14945 v -51.49905 z"
+         id="path19872" />
+    </g>
+  </g>
+</svg>
