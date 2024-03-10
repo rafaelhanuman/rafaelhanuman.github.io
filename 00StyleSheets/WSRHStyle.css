@@ -296,7 +296,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BARRACHAMADA { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 6%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
 #BARRACRIACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
 #BARRAATUALIZACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
-#BARRABUSCA { display: inline-block; position: relative; float: rigth; margin-top: 0%; margin-right: 5%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
+#BARRABUSCA { display: inline-block; position: relative; float: rigth; margin-top: 0%; margin-right: 4%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
 #MENUHAMBURGUER { display: none;}
 #LUPA { display: none;}
 #CHAMADA { display: none;}
