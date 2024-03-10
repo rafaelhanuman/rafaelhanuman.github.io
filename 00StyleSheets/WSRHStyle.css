@@ -216,7 +216,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 #BARRAATUALIZACAO {z-index: ; display: inline-block; position: relative; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #fd4700; font-size: 50%; font-weight: light; text-align: center; text-decoration: none;}
 
-#BARRABUSCA {z-index: ; display: inline-block; position: absolute; float: right; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: 55%; font-family: ; color: #fd4700; font-size: 130%; font-weight: bold; text-align: center; text-decoration: none;}
+#BARRABUSCA {z-index: ; display: inline-block; position: absolute; float: right; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: 57.5%; font-family: ; color: #fd4700; font-size: 130%; font-weight: bold; text-align: center; text-decoration: none;}
 
 #MENUHAMBURGUER {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -296,7 +296,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BARRACHAMADA { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 6%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
 #BARRACRIACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
 #BARRAATUALIZACAO { display: inline-block; position: relative; float: left; margin-top: 2%; margin-left: 0%; font-size: 50%; font-weight: light; vertical-align: center; text-decoration: none;}
-#BARRABUSCA { display: inline-block; position: relative; float: rigth; margin-top: 0%; margin-right: 4%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
+#BARRABUSCA { display: inline-block; position: relative; float: rigth; margin-top: 0%; margin-right: 4.5%; font-size: 150%; font-weight: bold; vertical-align: center; text-decoration: none;}
 #MENUHAMBURGUER { display: none;}
 #LUPA { display: none;}
 #CHAMADA { display: none;}
