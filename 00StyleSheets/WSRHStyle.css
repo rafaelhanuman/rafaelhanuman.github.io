@@ -6,7 +6,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 
 /*---------------------------------TELEFONE ; 1180px PRETO---------------------------------*/
-@media only screen and ( min-width : 1180px ) { body { background: black;}
+@media only screen and ( min-width : 380px ) { body { background: black;}
 #ESP01_BARRASUPERIOR {z-index: 3; display: inline-block; position: fixed; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 102%; height: 8%; background: black; opacity: 70%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: 15%; padding-rigth: ; padding-left: ; top:  85%; margin-bottom: 15%; margin-rigth: ; margin-left: -2%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
 
 #ESP02_BARRAIMAGEM {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
