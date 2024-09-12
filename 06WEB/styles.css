@@ -1,0 +1,91 @@
+/* Estilo para smartphones */
+@media (min-width: 400px) and (max-width: 1200px) {
+    #FOTO_EMPRESA { z-index: 0; position: relative; width: 100%; height: auto; transform: translateY(0%)  translateX(0%)}
+    #LOGOTIPO { z-index: 2; position: relative; width: 40%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-70%)  translateX(-0%)}
+    #produto-list {grid-template-columns: repeat(1, 1fr); transform: translateY(-1.5%)  translateX(0%)}
+    #QUADRO_DE_AVISOS { z-index: -1; position: relative; float: ; width: 100%; height: auto ; opacity: %; background: #fdecbd; border-radius: 30px; padding-top: 15%; margin-top: -20%; padding-bottom: 5%; transform: translateY(-50%)  translateX(0%); color: #28160a; font-size: 150%} h1 {font-size: 300%}}
+    .produto img {max-width: 80%; height: auto}
+
+/* Estilo para laptops e telas maiores */
+@media (min-width: 1201px) {
+    #FOTO_EMPRESA { z-index: 0; position: relative; width: 50%; height: auto; transform: translateY(0%)  translateX(-50%)}
+    #LOGOTIPO { z-index: 2; position: relative; width: 20%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-20%)  translateX(-10%)}
+    #produto-list {grid-template-columns: repeat(5, 1fr);  transform: translateY(-15%)  translateX(0%)}
+    #QUADRO_DE_AVISOS { z-index: 1; position: relative; float: ; width: 50%; height: 5% ; opacity: %; background: #fdecbd; border-radius: 30px; padding-top: 10%; margin-top: -27%; padding-rigth: 0%; padding-bottom: 0%; transform: translateY(-40%)  translateX(100%); color: #28160a; font-size: 150%} h1 {font-size: 300%}
+    .produto img {width: 80%; height: auto}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+#produto-list {
+    display: grid;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+
+.produto h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.produto select {
+    margin: 5px 0;
+}
+
+#total-pedido {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#whatsapp-button {
+    background-color: #25D366;
+    color: white;
+}
+
+#limpar-lista {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Adicionando estilos específicos para RH010405001Profile.jpg e RH010405001CapaEstática.jpg */
+#RH010405001Profile {
+    width: 100%;
+    height: auto;
+}
+
+#RH010405001CapaEstática {
+    width: 100%;
+    height: auto;
+}
