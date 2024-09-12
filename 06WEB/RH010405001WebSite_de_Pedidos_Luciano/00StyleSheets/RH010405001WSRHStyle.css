@@ -1,125 +1,106 @@
-body {font-family: "Bahnschrift";
-
- color: #285582;
-
- text-decoration: none;
-
- }
-
-/*---------------------------------TELEFONE 1180px PRETO---------------------------------*/
-@media only screen and ( max-width : 1180px ) { body { opacity: %; background: #28160a;}
-#FOTO_EMPRESA { z-index: -2; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 1180px; height: 125%; opacity: %; background: ; border: ; border-radius: 0px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -5%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#LOGOTIPO { z-index: 2; display: inline-block; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 47%; height: auto; opacity: %; background: ; border: 15px solid white; border-radius: 50%; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -30%; margin-left: 27%; margin-bottom: 70%; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: top; text-decoration: ; text-align: ; }
-
-#QUADRO_DE_AVISOS { z-index: -1; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 1180px; height: ; opacity: %; background: #fde02a; border: ; border-radius: 30px; padding-top: 20%; padding-left: ; padding-bottom: 3%; padding-rigth: ; margin-top: -10%; margin-left: 1%; margin-bottom: 0%; margin-rigth: ; color: #28160a; font-size: 400%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#TABELAGRIDS { z-index: -20; display: grid; grid-template-columns: repeat(auto-fill); grid-template-rows: ; position: ; float: ; width: 1180px; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 10%; padding-rigth: ; margin-top: 1%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: #3c4d61; font-size: 160%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#GRIDDIR01 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 100%; height: 680px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR02 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 100%; height: 680px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR03 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 100%; height: 680px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR04 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 100%; height: 680px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#NOME { z-index: 4; display:  inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 55%; height: 55%; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 0%; margin-left: -50%; margin-bottom: 10%; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#FOTO { z-index: 1; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 45%; height: 20%; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 6%; margin-left: 0%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#MAIS { z-index: 0; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 75%; height: 25%; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 20%; margin-left: -20%; margin-bottom: -10%; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#BEBIDA { z-index: 1; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 25%; height: 25%; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 2%; margin-left: 10%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#PRECO { z-index: 3; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 30%; height: 10%; opacity: %; background: none; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 10%; margin-left: -40%; margin-bottom: ; margin-rigth: ; color: #ef9300; font-family: "aAidilfitri"; font-size: 600%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: left; }
-
-#PRECOFRACAO { z-index: ; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: ; height: ; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -500%; margin-left: 0%; margin-bottom: -800%; margin-rigth: %; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#QUANTIDADE { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: ; height: ; opacity: %; background: black; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 45%; margin-left: 15%; margin-bottom: ; margin-rigth: ; color: white; font-size: 200%; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CHECKBOX { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 60px; height: 60px; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 42%; margin-left: 36%; margin-bottom: ; margin-rigth: ; color: red; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CONFIRMACAO { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 1180px; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 15%; padding-rigth: ; margin-top: 0%; margin-left: 1%; margin-bottom: 20%; margin-rigth: ; color: #3c4d61; font-size: 150%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#ENVIAR_EMAIL { z-index: 2; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 50%; height: 10%; opacity: %; background: #ffffff; border: ; border-radius: 5px; padding-top: 5%; padding-left: ; padding-bottom: 5%; padding-rigth: ; margin-top: -20%; margin-left: ; margin-bottom: ; margin-rigth: ; color: black; font-size: 75%; font-weight: bold; vertical-align: center; text-decoration: none; text-align: ; }
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/*---------------------------------TELEFONE 1366px PRETO---------------------------------*/
-@media only screen and ( min-width : 1366px ) { body { opacity: %; background: #28160a; }
-#FOTO_EMPRESA { z-index: -2; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 102%; height: AUTO; opacity: %; background: ; border: ; border-radius: 0px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -10%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#LOGOTIPO { z-index: 2; display: inline-block; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 20%; height: auto; opacity: %; background: ; border: 15px solid white; border-radius: 50%; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -50%; margin-left: 5%; margin-bottom: 70%; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: top; text-decoration: ; text-align: ; }
-
-#QUADRO_DE_AVISOS { z-index: -1; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 1180px; height: ; opacity: %; background: #fdecbd; border: ; border-radius: 30px; padding-top: 0%; padding-left: ; padding-bottom: 0%; padding-rigth: ; margin-top: -20%; margin-left: 18%; margin-bottom: 0%; margin-rigth: ; color: #28160a; font-size: 150%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#TABELAGRIDS { z-index: -20; display: grid; grid-template-columns: 33% 33% 33%; grid-template-rows: ; position: ; float: ; width: 100%; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 10%; padding-rigth: ; margin-top: 1%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: #3c4d61; font-size: 160%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#GRIDDIR01 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 450px; height: 450px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR02 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 450px; height: 450px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR03 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 450px; height: 450px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#GRIDDIR04 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 450px; height: 450px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#NOME { z-index: 4; display:  inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 19%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 20%; margin-left: -17%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#FOTO { z-index: 1; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 25%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 6%; margin-left: -10%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#MAIS { z-index: 0; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 50%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 18%; margin-left: 0%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#BEBIDA { z-index: 1; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 9%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 5%; margin-left: 5%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#PRECO { z-index: 3; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 29%; height: 10%; opacity: %; background: none; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 0%; margin-left: -17%; margin-bottom: ; margin-rigth: ; color: #ef9300; font-size: 250%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: left; }
-
-#PRECOFRACAO { z-index: ; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: ; height: ; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -500%; margin-left: 0%; margin-bottom: -800%; margin-rigth: %; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#QUANTIDADE { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: ; height: ; opacity: %; background: black; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 28%; margin-left: 0%; margin-bottom: ; margin-rigth: ; color: white; font-size: 150%; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CHECKBOX { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 50px; height: 100px; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 26%; margin-left: 12%; margin-bottom: ; margin-rigth: ; color: red; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CONFIRMACAO { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 1180px; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 15%; padding-rigth: ; margin-top: 0%; margin-left: 1%; margin-bottom: 20%; margin-rigth: ; color: #3c4d61; font-size: 150%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#ENVIAR_EMAIL { z-index: 2; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 50%; height: 10%; opacity: %; background: #ffffff; border: ; border-radius: 5px; padding-top: 5%; padding-left: ; padding-bottom: 5%; padding-rigth: ; margin-top: -20%; margin-left: ; margin-bottom: ; margin-rigth: ; color: black; font-size: 75%; font-weight: bold; vertical-align: center; text-decoration: none; text-align: ; }
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+.header-image {
+    width: 100%;
+    height: auto;
+}
 
-/*---------------------------------TELEFONE 1920px PRETO---------------------------------*/
-@media only screen and ( min-width : 1920px ) { body { opacity: %; background: #28160a; }
-#FOTO_EMPRESA { z-index: -2; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 102%; height: AUTO; opacity: %; background: ; border: ; border-radius: 0px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -5%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.profile-image {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -75px;
+}
 
-#LOGOTIPO { z-index: 2; display: inline-block; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 20%; height: auto; opacity: %; background: ; border: 15px solid white; border-radius: 50%; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -50%; margin-left: 5%; margin-bottom: 70%; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: top; text-decoration: ; text-align: ; }
+/* Aviso */
+#quadro-de-aviso {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 0 20px;
+    border-radius: 8px;
+}
 
-#QUADRO_DE_AVISOS { z-index: -1; display: ; grid-template-columns: ; grid-template-rows: ; position: relative; float: ; width: 1180px; height: ; opacity: %; background: #fdecbd; border: ; border-radius: 30px; padding-top: 0%; padding-left: ; padding-bottom: 0%; padding-rigth: ; margin-top: -15%; margin-left: 18%; margin-bottom: 0%; margin-rigth: ; color: #28160a; font-size: 150%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
+/* Grid de Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 20px;
+}
 
-#TABELAGRIDS { z-index: -20; display: grid; grid-template-columns: 33% 33% 33%; grid-template-rows: ; position: ; float: ; width: 100%; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 10%; padding-rigth: ; margin-top: 1%; margin-left: 1%; margin-bottom: ; margin-rigth: ; color: #3c4d61; font-size: 160%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
 
-#GRIDDIR01 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 680px; height: 680px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
 
-#GRIDDIR02 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 680px; height: 680px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.more-img {
+    width: 24px;
+    height: auto;
+}
 
-#GRIDDIR03 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 680px; height: 680px; opacity: %; background: #f9f2ea; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.product-select {
+    margin: 10px 0;
+    padding: 5px;
+}
 
-#GRIDDIR04 { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 680px; height: 680px; opacity: %; background: white; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: ; margin-left: ; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+/* Formulário de Confirmação */
+#confirmacao {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
 
-#NOME { z-index: 4; display:  inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 20%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 20%; margin-left: -18%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.form-textarea {
+    font-size: 1em;
+    background: #fdecbd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
 
-#FOTO { z-index: 1; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 20%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 6%; margin-left: -18%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.form-submit {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-#MAIS { z-index: 0; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 10%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 18%; margin-left: 0%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+.form-submit:hover {
+    background-color: #45a049;
+}
 
-#BEBIDA { z-index: 1; display: ; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 10%; height: auto; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 2%; margin-left: 5%; margin-bottom: ; margin-rigth: ; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
+/* WhatsApp */
+.whatsapp-link {
+    text-align: center;
+    margin: 20px;
+}
 
-#PRECO { z-index: 3; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 30%; height: 10%; opacity: %; background: none; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 0%; margin-left: -17%; margin-bottom: ; margin-rigth: ; color: #ef9300; font-size: 300%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: left; }
-
-#PRECOFRACAO { z-index: ; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: ; height: ; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: -500%; margin-left: 0%; margin-bottom: -800%; margin-rigth: %; color: ; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#QUANTIDADE { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: ; height: ; opacity: %; background: black; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 30%; margin-left: -5%; margin-bottom: ; margin-rigth: ; color: white; font-size: 200%; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CHECKBOX { z-index: 6; display: inline; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 100px; height: 100px; opacity: %; background: ; border: ; border-radius: ; padding-top: ; padding-left: ; padding-bottom: ; padding-rigth: ; margin-top: 28%; margin-left: 8%; margin-bottom: ; margin-rigth: ; color: red; font-size: ; font-weight: ; vertical-align: ; text-decoration: ; text-align: ; }
-
-#CONFIRMACAO { z-index: ; display: ; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 1180px; height: auto; opacity: %; background: white; border: ; border-radius: 10px; padding-top: ; padding-left: ; padding-bottom: 15%; padding-rigth: ; margin-top: 0%; margin-left: 1%; margin-bottom: 20%; margin-rigth: ; color: #3c4d61; font-size: 150%; font-weight: bold; vertical-align: ; text-decoration: none; text-align: center; }
-
-#ENVIAR_EMAIL { z-index: 2; display: inline; grid-template-columns: ; grid-template-rows: ; position: ; float: ; width: 50%; height: 10%; opacity: %; background: #ffffff; border: ; border-radius: 5px; padding-top: 5%; padding-left: ; padding-bottom: 5%; padding-rigth: ; margin-top: -20%; margin-left: ; margin-bottom: ; margin-rigth: ; color: black; font-size: 75%; font-weight: bold; vertical-align: center; text-decoration: none; text-align: ; }
+.whatsapp-img {
+    width: 50px;
+    height: auto;
 }
