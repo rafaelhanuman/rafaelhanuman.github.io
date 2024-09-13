@@ -1,0 +1,161 @@
+body {font-family: "Bahnschrift"; margin: 0; padding: 0; box-sizing: border-box}
+header {text-align: center; margin-bottom: 20px}
+
+/* Estilo para smartphones */
+@media (min-width: 400px) and (max-width: 1200px) {
+#FOTO_EMPRESA { z-index: 0; position: relative; width: 100%; height: auto; transform: translateY(0%)  translateX(0%)}
+#LOGOTIPO { z-index: 2; position: relative; width: 40%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-70%)  translateX(-0%)}
+#QUADRO_DE_AVISOS { z-index: -1; position: relative; float: ; width: 100%; height: auto ; opacity: %; background: #fdecbd; border-radius: 30px;  margin-top: -20%; padding-top: 20%; padding-bottom: 5%; transform: translateY(-30%)  translateX(0%); color: #28160a; font-size: 150%}
+h1 {font-size: 350%}
+h4 {font-size: 150%}
+h2 {font-size: 250%}
+
+#LISTA_PRODUTOS {display: grid; gap: 20px; padding: 0 20px; grid-template-columns: repeat(1, 1fr); transform: translateY(-3%)  translateX(0%)}
+
+#GRIDDIR01 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 800px; text-align: center; background-color: red}
+#GRIDDIR02 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 800px; text-align: center; background-color: green}
+#GRIDDIR03 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 800px; text-align: center; background-color: blue}
+#GRIDDIR04 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 800px; text-align: center; background-color: yellow}
+
+#FOTO { z-index: 1; display: inline-block; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 65%; height: auto; transform: translateY(10%)  translateX(-70%)}
+#BEBIDA { z-index: 3; display: inline-block; position: absolute; width: 25%; height: 4%; font-size: 50px; transform: translateY(10%)  translateX(80%)}
+#BEBIDA1 { z-index: 3; display: inline-block; position: absolute; width: 25%; height: 4%; font-size: 50px; transform: translateY(10%)  translateX(80%)}
+#NOME { z-index: 3; display: inline-block; position: absolute;  width: 60%; height: 50%; font-size: 50px; transform: translateY(-41%)  translateX(-80%)}
+#MAIS { z-index: 3; display: inline-block; position: absolute; width: 20%; height: 20%; font-size: 50px; transform: translateY(-32%)  translateX(30%)}
+#QUANTIDADE { z-index: 3; display: inline-block; position: absolute; font-size: 50px; transform: translateY(1000%)  translateX(40%)}
+#VALOR_PRODUTO { z-index: 3; display: inline-block; position: absolute; font-size: 42px; color: white; transform: translateY(1300%)  translateX(50%)}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 50px} button {font-size: 32px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+#whatsapp-button {background-color: #25D366; color: white}
+#limpar-lista {background-color: #f44336; color: white}
+#ENDERECO {text-align: center; font-size: 8px}
+
+}
+
+/* Estilo para laptops e telas maiores */
+@media (min-width: 1201px) {
+#FOTO_EMPRESA { z-index: 0; position: relative; width: 50%; height: auto; transform: translateY(0%)  translateX(-50%)}
+#LOGOTIPO { z-index: 2; position: relative; width: 20%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-20%)  translateX(-10%)}
+#QUADRO_DE_AVISOS { z-index: 1; position: relative; float: ; width: 50%; height: 5% ; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 10%; margin-top: -27%; padding-rigth: 0%; padding-bottom: 6.5%; transform: translateY(-40%)  translateX(100%); color: #28160a; font-size: 150%}
+h1 {font-size: 160%}
+h4 {font-size: 80%}
+h2 {font-size: 140%}
+
+#LISTA_PRODUTOS {display: grid; gap: 10px; padding: 0 10px; grid-template-columns: repeat(5, 5fr); transform: translateY(-25%)  translateX(0%)}
+
+#GRIDDIR01 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 200px; text-align: center; background-color: red}
+#GRIDDIR02 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 200px; text-align: center; background-color: green}
+#GRIDDIR03 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 200px; text-align: center; background-color: blue}
+#GRIDDIR04 {border: 1px solid #ddd; padding: 10px; border-radius: 5px; height: 200px; text-align: center; background-color: yellow}
+
+#FOTO { z-index: 1; display: inline-block; grid-template-columns: ; grid-template-rows: ; position: absolute; float: ; width: 13%; height: 10%; transform: translateY(10%)  translateX(-70%)}
+#BEBIDA { z-index: 3; display: inline-block; position: absolute; width: 5%; height: auto; font-size: 50px; transform: translateY(35%)  translateX(80%)}
+#BEBIDA1 { z-index: 3; display: inline-block; position: absolute; width: 5%; height: auto; font-size: 50px; transform: translateY(5%)  translateX(80%)}
+#NOME { z-index: 3; display: inline-block; position: absolute;  width: 15%; height: 10%; font-size: 50px; transform: translateY(100%)  translateX(-65%)}
+#MAIS { z-index: 3; display: inline-block; position: absolute; width: 4%; height: auto; font-size: 50px; transform: translateY(100%)  translateX(10%)}
+#QUANTIDADE { z-index: 3; display: inline-block; position: absolute; font-size: 10px; transform: translateY(900%)  translateX(50%)}
+#VALOR_PRODUTO { z-index: 3; display: inline-block; position: absolute; font-size: 8px; color: white; transform: translateY(1200%)  translateX(70%)}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 30px}
+
+#BOTAO_WHATSAPP {background-color: #25D366; color: white;  padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; transform: translateY(100%)  translateX(10%)}
+#BOTAO_LIMPAR_LISTA {background-color: #f44336; color: white; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; transform: translateY(100%)  translateX(10%)}
+#ENDERECO {text-align: center; font-size: 10px; font-size: 16px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+/* Estilo para smartphones */
+@media (min-width: 400px) and (max-width: 1200px) {
+    #FOTO_EMPRESA { z-index: 0; position: relative; width: 100%; height: auto; transform: translateY(0%)  translateX(0%)}
+    #LOGOTIPO { z-index: 2; position: relative; width: 40%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-70%)  translateX(-0%)}
+    #produto-list {grid-template-columns: repeat(1, 1fr); transform: translateY(-1.2%)  translateX(0%)}
+    #QUADRO_DE_AVISOS { z-index: -1; position: relative; float: ; width: 100%; height: auto ; opacity: %; background: #fdecbd; border-radius: 30px; padding-top: 15%; margin-top: -20%; padding-bottom: 5%; transform: translateY(-50%)  translateX(0%); color: #28160a; font-size: 150%} h1 {font-size: 350%}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 50px} button {font-size: 32px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 5px}
+
+    .produto img {max-width: 80%; height: auto}
+}
+
+/* Estilo para laptops e telas maiores */
+@media (min-width: 1201px) {
+    #FOTO_EMPRESA { z-index: 0; position: relative; width: 50%; height: auto; transform: translateY(0%)  translateX(-50%)}
+    #LOGOTIPO { z-index: 2; position: relative; width: 20%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-20%)  translateX(-10%)}
+    #produto-list {grid-template-columns: repeat(5, 1fr);  transform: translateY(-12%)  translateX(0%)}
+    #QUADRO_DE_AVISOS { z-index: 1; position: relative; float: ; width: 50%; height: 5% ; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 10%; margin-top: -27%; padding-rigth: 0%; padding-bottom: 5%; transform: translateY(-40%)  translateX(100%); color: #28160a; font-size: 150%} h1 {font-size: 300%}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 30px} button {font-size: 16px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 10px}
+
+    .produto img {width: 80%; height: auto}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+#produto-list {
+    display: grid;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+
+.produto h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.produto select {
+    margin: 5px 0;
+}
+
+
+
+/* Adicionando estilos específicos para RH010405001Profile.jpg e RH010405001CapaEstática.jpg */
+#RH010405001Profile {
+    width: 100%;
+    height: auto;
+}
+
+#RH010405001CapaEstática {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
