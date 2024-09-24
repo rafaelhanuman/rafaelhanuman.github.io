@@ -39,8 +39,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr}
 
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
-
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; max-width: 100%; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
 
 #ESP11_CAPAANIMADA {z-index: -2; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 130%; height: 130%; background: ; opacity: ; border: ; border-radius: 0px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: -20%; margin-top: -5%; margin-bottom: ; margin-rigth: ; margin-left: -20%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
@@ -164,8 +162,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr}
 
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
-
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; max-width: 100%; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
 
 #ESP11_CAPAANIMADA {z-index: -2; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 130%; height: 130%; background: ; opacity: ; border: ; border-radius: 0px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: -20%; margin-top: -5%; margin-bottom: ; margin-rigth: ; margin-left: -20%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
@@ -283,8 +279,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -386,8 +380,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -490,8 +482,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -595,8 +585,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -700,8 +688,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr;; grid-gap: 10px;}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -804,9 +790,7 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
-#GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr;; grid-gap: 10px;}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
+#GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
@@ -909,8 +893,6 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
 #GRIDCONTAINER {display: grid; grid-template-columns: 1fr 3fr;; grid-gap: 10px;}
-
-.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
                                              
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
