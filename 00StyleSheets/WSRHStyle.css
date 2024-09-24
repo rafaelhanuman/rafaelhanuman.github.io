@@ -274,6 +274,10 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 
 #BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
 
+#GRIDCONTAINER {display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;}
+
+.GRID_ITEM {background-color: lightblue; padding: 20px; text-align: center;}
+                                             
 #ESP10_CORPODOSITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
 
 #ESP11_CAPAANIMADA {z-index: -2; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 101%; height: 100%; background: ; opacity: ; border: ; border-radius: 80px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 0%; margin-bottom: ; margin-rigth: ; margin-left: -1%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
