@@ -1,0 +1,186 @@
+body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: #e2e7f0; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: hidden; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: "Bahnschrift"; color: #001c2d; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+
+/*---------------------------------BASE 720px PRETO---------------------------------*/
+
+@media only screen and ( min-width : 00px ) { body { background: black;}}
+
+
+/*---------------------------------TELEFONE ; 1180px PRETO---------------------------------*/
+@media only screen and ( min-width : 1180px ) { body { background: black;}
+
+#BARRASUPERIOR25 {z-index: 3; display: inline-block; position: fixed; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 102%; height: 8%; background: black; opacity: 70%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: 15%; padding-rigth: ; padding-left: ; top:  85%; margin-bottom: 15%; margin-rigth: ; margin-left: -2%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#FOTO_PERFIL_BARRA {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#TELEFONE_BARRA {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#DATA_CRIACAO_SITE {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#DATA_ATUALIZACAO {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#BUSCA_NA_BARRA {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#BOTAO_WHATSAPP {z-index: ; display: inline-block; position: relative; float: right; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 18%; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 10px; margin-bottom: ; margin-rigth: ; left: -39.5%; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#BOTAO_MENUCELULAR {z-index: ; display: inline-block; position: relative; float: right; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 18%; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 9px; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#BOTAO_IDIOMAS {z-index: ; display: inline; position: relative; float: center; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: none; border-radius: 5px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: 20%; font-family: ; color: white; font-size: ; font-weight: ; text-align: center; text-decoration: ; cursor: pointer; user-select: none;}
+
+/* DIV do menu idiomas desligada */
+#menuToggle {display: none;}
+
+/* tudo que aparece quando o botão é clicado */
+#menuToggle:checked + #BOTAO_IDIOMAS + #BANDEIRAS_CELULAR {z-index: 3; display: inline; position: fixed; float: center; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 22%; height: 71%; background: black; opacity: 100%; border: ; border-radius: 50px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: 4%; padding-bottom: 15%; padding-rigth: ; padding-left: ; top:  17%; margin-top: 10px; margin-bottom: 10%; margin-rigth: ; margin-left: -22%; font-family: ; color: #d1d3d4; font-size: 200%; font-weight: ; text-align: center; text-decoration: none;}
+
+/* menu idiomas desligado */
+#BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#CORPO_DO_SITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; max-width: 100%; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#CAPA_ANIMADA {z-index: -2; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 130%; height: 130%; background: ; opacity: ; border: ; border-radius: 0px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: -20%; margin-top: -5%; margin-bottom: ; margin-rigth: ; margin-left: -20%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#FOTO_PROFILE_GRANDE {z-index: 2; display: inline-block; position: absolute; float: center; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 30%; height: auto; background: ; opacity: ; border: 15px solid white; border-radius: 50%; overflow-y: ; overflow-x: ; justify-content: center; vertical-align: top; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: -42%; marginbottom: ; margin-rigth: ; margin-left: 37%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#TIT_PROFILE { z-index: -1; position: relative; gap: ; max-width: ; width: 113%; background: black; padding-top: 15%; opacity: 70%; padding-bottom: 0%; margin-left: -2%; margin-top: -25%; margin-bottom: 0%; border-radius: 30px; color: white; font-size: 700%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#THEHOTOFWORLDS {z-index: 2; display: block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 112%; height: 490px; background: #4a4c4e; opacity: ; border: ; border-radius: 20px; overflow-y: ; overflow-x: scroll; justify-content: ; padding-top: 5%; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: -1%; font-family: ; color: #fd4700; font-size: 700%; font-weight: bold; text-align: center; text-decoration: none;}
+
+.SECCOES {z-index: ; display: inline-block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 100%; height: 90%; background: white; opacity: ; border: ; border-radius: 20px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #00; font-size: 0%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#GRIDCONTAINER25 {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: ; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+#GRIDCONTAINER26 {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: ; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 112%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#TITULO_MATERIA {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: white; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: 15%; padding-rigth: ; padding-left: -1%; margin-top: 1%; margin-bottom: 5%; margin-rigth: ; margin-left: ; font-family: ; color: #d1d3d4; font-size: 250%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#IMAGEM_PRINC_MATERIA {z-index: ; display: inline-block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 100%; height: 100%; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+.TEXTO_ARTIGO {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 90%; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 6%; margin-bottom: 5%; margin-rigth: 5%; margin-left: 5%; font-family: ; color: ; font-size: 200%; font-weight: normal; text-align: ; text-decoration: none;}
+
+
+#CONSULTE_CATALOGO {z-index: ; display: block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 95%; height: ; background: white; opacity: 100%; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 1%; margin-bottom: 30%; margin-rigth: ; margin-left: 8%; font-family: ; color: #001c2d; font-size: 500%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#MENU_LATERAL {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#BANDEIRAS {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#ESP18_IMGMENULAT {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#ESP19_TXTMENULAT {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#MENU_EXTERNO {z-index: ; display: relative; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: black; opacity: 100%; border: ; border-radius: 30px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: 10%; padding-bottom: 10%; padding-rigth: ; padding-left: ; margin-top: 10%; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#IMG_MENU_EXT {z-index: ; display: inline; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 25%; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: center; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: 26%; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: 10%; font-family: ; color: ; font-size: ; font-weight: ; text-align: center; text-decoration: none;}
+
+#TXT_MENU_EXT {z-index: ; display: block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: center; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: 280%; font-weight: ; text-align: center; text-decoration: none;}
+}
+
+
+/*---------------------------------NOTEBOOK 1275px CINZA CLARO---------------------------------*/
+@media only screen and (min-width : 1275px) { body { background: #f1f2f2;}
+
+#BARRASUPERIOR25 {z-index: ; display: ; position: fixed; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 102%; height: ; background: white; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: 0%; padding-rigth: ; padding-left: ; top: 0%; margin-bottom: ; margin-rigth: ; margin-left: -2%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: none;}
+
+#FOTO_PERFIL_BARRA {z-index: ; display: inline; position: absolute; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 3%; height: ; background: ; opacity: ; border: 2px groove #e2e7f0; border-radius: 50%; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 0.5%; margin-bottom: ; margin-rigth: ; margin-left: 2%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: }
+
+#TELEFONE_BARRA {z-index: ; display: inline-block; position: relative; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: 6%; font-family: ; color: #fd4700; font-size: 130%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#DATA_CRIACAO_SITE {z-index: ; display: inline-block; position: relative; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: 1%; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #fd4700; font-size: 50%; font-weight: light; text-align: center; text-decoration: none;}
+
+#DATA_ATUALIZACAO {z-index: ; display: inline-block; position: relative; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #fd4700; font-size: 50%; font-weight: light; text-align: center; text-decoration: none;}
+
+#BUSCA_NA_BARRA {z-index: ; display: inline-block; position: absolute; float: right; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 2%; margin-bottom: ; margin-rigth: ; margin-left: 59%; font-family: ; color: #fd4700; font-size: 130%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#BOTAO_WHATSAPP {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 10px; margin-bottom: ; margin-rigth: ; left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: }
+
+#BOTAO_MENUCELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#BOTAO_IDIOMAS {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ; cursor: ; user-select: ;}
+
+/* DIV do menu idiomas desligada */
+#menuToggle {display: none;}
+
+#BANDEIRAS_CELULAR {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color:  ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#CORPO_DO_SITE {z-index: ; display: ; position: ; float: left; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: 86%; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#CAPA_ANIMADA {z-index: -2; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 101%; height: 100%; background: ; opacity: ; border: ; border-radius: 80px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 0%; margin-bottom: ; margin-rigth: ; margin-left: -1%; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#FOTO_PROFILE_GRANDE {z-index: 2; display: inline-block; osition: absolute; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 18%; height: ; background: ; opacity: 100%; border: 21px groove white; border-radius: 50%; overflow-y: ; overflow-x: ; vertical-align: top; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 12%; margin-b; om: ; margin-rigth: ; margin-left: -85%; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#TIT_PROFILE { z-index: -3; position: relative; gap: ; max-width: ; width: 101%; background: white; padding-top: 6%; opacity: 100%; padding-bottom: 3%; margin-left: -1%; margin-top: -6%; margin-bottom: -5%; border-radius: 0px; border-radius: 0px; color: #001c2d; font-size: 250%; font-weight: bold; text-align: left; vertical-align: top; text-decoration: none;}
+
+#THEHOTOFWORLDS {z-index: 2; display: block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 101%; height: 380px; background: #c3c6c8; opacity: 100%; border: ; border-radius: 20px; overflow-y: ; overflow-x: scroll; justify-content: ; padding-top: 1%; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: -1%; font-family: ; color: #001c2d; font-size: 150%; font-weight: bold; text-align: center; text-decoration: none;}
+
+.SECCOES {z-index: ; display: inline-block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 100%; height: auto; background: white; opacity: 100%; border: ; border-radius: 20px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #001c2d; font-size: 40%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#GRIDCONTAINER25 {z-index: ; display: grid; position: ; float: ; grid-template-columns: 50% 50%; grid-template-rows: auto; gap: ; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+#GRIDCONTAINER26 {z-index: ; display: grid; position: ; float: ; grid-template-columns: 70% 30%; grid-template-rows: auto; gap: ; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+#GRIDCONTAINER27 {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: ; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 100%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#TITULO_MATERIA {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: white; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: center; padding-top: ; padding-bottom:; padding-rigth: ; padding-left: -1%; margin-top: 1%; margin-bottom: 5%; margin-rigth: ; margin-left: ; font-family: ; color: #d1d3d4; font-size: 250%; font-weight: bold; text-align: center; text-decoration: none;}
+
+#IMAGEM_PRINC_MATERIA {z-index: ; display: inline-block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 100%; height: 100%; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+.TEXTO_ARTIGO {z-index: ; display: ; position: relative; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: 6%; margin-bottom: 5%; margin-rigth: 50%; margin-left: 5%; font-family: ; color: ; font-size: 50%; font-weight: normal; text-align: ; text-decoration: none;}
+
+#CONSULTE_CATALOGO { display: inline-block; gap: ; max-width: ; width: 70%; height: 200%; background: white; margin-left: 1%; margin-top: 1%; opacity: 100%; padding-bottom: 0%; border-radius: 10px; color: #001c2d; font-size: 200%; text-align: center; font-weight: bold; text-decoration: none;}
+
+#MENU_LATERAL { z-index: -1; display: inline-block; position: fixed; float: right; background: #dfe2e3; gap: ; max-width: ; width: 15%; height: 87%; padding-top: 3%; margin-left: 3%; margin-top: -1%; border-radius: 20px; left: 83%; color: #001c2d; font-size: 10px; text-align: left; text-decoration: none; overflow-y: scroll;}
+
+#BANDEIRAS  {z-index: ; display: inline; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width:30px ; height:15px ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#ESP18_IMGMENULAT {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#ESP19_TXTMENULAT {z-index: ; display: block; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #0a2d4f; font-size: 135%; font-weight: bold; text-align: left; text-decoration: none;}
+
+#MENU_EXTERNO {z-index: ; display: none; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#IMG_MENU_EXT {z-index: ; display: inline; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: 30%; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: 16%; font-family: ; color: ; font-size: ; font-weight: light; text-align: center; text-decoration: none;}
+
+#TXT_MENU_EXT {z-index: ; display: inline; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: ; max-width: ; width: ; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: 5%; font-family: ; color: ; font-size: 300%; font-weight: light; text-align: center; text-decoration: none;}
+}
+
+/*---------------------------------NOTEBOOK 1366px CINZA CLARO---------------------------------*/
+@media only screen and (min-width : 1366px) { body { background: #f1f2f2;}
+
+/*---------------------------------NOTEBOOK 1920px BRANCO---------------------------------*/
+@media only screen and (min-width : 1920px) { body { background: #ffffff;}
+
+
+/*---------------------------------HD 1985px CIAN---------------------------------*/
+@media only screen and ( min-width : 1985px ) { body { background: #6dcff6;}
+
+/*---------------------------------HD 2050px MANGENTA---------------------------------*/
+@media only screen and ( min-width : 2050px ) { body { background: #ff079a;}
+
+
+/*---------------------------------HD 2350px AMARELO---------------------------------*/
+@media only screen and ( min-width : 2350px ) { body { background: #fff45f;}
+
+
+/*---------------------------------HD 2650px VERMELHO---------------------------------*/
+@media only screen and ( min-width : 2650px ) { body { background: #da2128;}
+
+
+/*---------------------------------HD 2950px VERDE---------------------------------*/
+@media only screen and ( min-width : 2950px ) { body { background: #00ff00;}
+
+/*---------------------------------HD 3250px AZUL---------------------------------*/
+@media only screen and ( min-width : 3250px ) { body { background: #0052a4;}
+
+/*---------------------------------HD 3550px LARANJA---------------------------------*/
+@media only screen and ( min-width : 3550px ) { body { background: #fa8e1a;}
+
+/*---------------------------------HD 3850px ROXO---------------------------------*/
+@media only screen and ( min-width : 3850px ) { body { background: #af00bf;}
+
+/*---------------------------------FULLHD 4150px PRETO---------------------------------*/
+@media only screen and ( min-width : 4150px ) { body { background: black;}
