@@ -1,0 +1,67 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------Estilo para smartphones-------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 400px) and (max-width: 1200px) {body {font-family: Brightons; margin: 0; padding: 0; box-sizing: border-box;}
+
+#CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 100%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#FOTO_EMPRESA { z-index: ; position: ; width: 100%; height: 100%; transform: translateY(0%)  translateX(0%)}
+
+#QUADRO_DE_AVISOS { z-index: 0; position: ; float: ; width: 100%; height: auto; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 0%; margin-top: 0%; padding-rigth: ; padding-bottom: ; transform: translateY(0%)  translateX(0%); color: #28160a; font-size: 350%}
+	h1 {font-size: 300%}
+	h4 {font-size: 120%}
+	h2 {font-size: 200%}
+
+#LOGOTIPO { z-index: 2; position: relative; width: 30%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-355%)  translateX(0%) scale(100%)}
+
+#produto-list {z-index: 2; display: grid; gap: 20px; padding: 0 20px; grid-template-columns: repeat(1, 1fr);  transform: translateY(-1.2%)  translateX(0%)}
+.produto img {width: 80%; height: auto}
+.produto select {margin: 5px 0; font-size: 60px}
+.produto {border: 1px solid #ddd; padding: 10px; border-radius: 5px; text-align: center; background-color: #f9f9f9; font-size: 50px}
+.produto h2 {margin: 10px 0; font-size: 100px; color: #f5a98f}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 50px} button {font-size: 32px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 5px}
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------Estilo para laptops e telas maiores-------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 1201px) {body {font-family: Brightons; margin: 0; padding: 0; box-sizing: border-box;}
+
+#CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 30% 70%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 100%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#FOTO_EMPRESA { z-index: ; position: ; width: 150%; height: 100%; transform: translateY(0%)  translateX(-10%)}
+
+#QUADRO_DE_AVISOS { z-index: 0; position: ; float: ; width: ; height: ; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 0%; margin-top: 0%; padding-rigth: ; padding-bottom: ; transform: translateY(0%)  translateX(0%); color: #28160a; font-size: 150%}
+	h1 {font-size: 300%}
+	h4 {font-size: 120%}
+	h2 {font-size: 175%}
+
+#LOGOTIPO { z-index: 2; position: relative; width: 100%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-50%)  translateX(45%) scale(50%)}
+
+#produto-list {z-index: 2; display: grid; gap: 20px; padding: 0 20px;grid-template-columns: repeat(5, 1fr);  transform: translateY(-14%)  translateX(0%)}
+.produto img {width: 80%; height: auto}
+.produto select {margin: 5px 0; font-size: 20px}
+.produto {border: 1px solid #ddd; padding: 10px; border-radius: 5px; text-align: center; background-color: #f9f9f9; font-size: 15px}
+.produto h2 {margin: 10px 0; font-size: 15px}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 30px} button {font-size: 16px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 10px}
+
+}
