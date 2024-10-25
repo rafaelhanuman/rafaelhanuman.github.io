@@ -1,54 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const produtoList = document.querySelectorAll('.produto, .produto1, .produto2, .produto3');
+    const totalSpan = document.querySelector('#TOTAL-PEDIDO span');
+    const whatsappButton = document.querySelector('#whatsapp-button');
+    const limparListaButton = document.querySelector('#limpar-lista');
+
     function atualizarTotal() {
-        const produtos = document.querySelectorAll('.produto');
         let total = 0;
 
-        produtos.forEach(produto => {
-            const quantidade = parseInt(produto.querySelector('.produto-quantidade').value, 10);
+        produtoList.forEach(produto => {
+            const quantidadeSelect = produto.querySelector('select');
             const preco = parseFloat(produto.getAttribute('data-preco'));
-            const valorTotalProduto = preco * quantidade;
-            
-            // Atualizar o valor exibido do produto
-            produto.querySelector('.produto-valor').textContent = `Valor: R$ ${valorTotalProduto.toFixed(2).replace('.', ',')}`;
-
-            // Atualizar o total do pedido
-            total += valorTotalProduto;
+            const quantidade = parseInt(quantidadeSelect.value);
+            total += preco * quantidade;
         });
 
-        // Atualizar o valor total do pedido
-        document.querySelector('#TOTAL-PEDIDO span').textContent = total.toFixed(2).replace('.', ',');
+        totalSpan.textContent = total.toFixed(2);
     }
 
-    // Adicionar eventos de mudança para todos os seletores de quantidade
-    document.querySelectorAll('.produto-quantidade').forEach(select => {
-        select.addEventListener('change', atualizarTotal);
+    produtoList.forEach(produto => {
+        const quantidadeSelect = produto.querySelector('select');
+        quantidadeSelect.addEventListener('change', atualizarTotal);
     });
 
-    // Evento de clique para enviar o pedido por WhatsApp
-    document.getElementById('whatsapp-button').addEventListener('click', () => {
-        const produtos = document.querySelectorAll('.produto');
-        let mensagem = 'Pedido:\n';
-
-        produtos.forEach(produto => {
-            const nome = produto.querySelector('h2').textContent;
-            const quantidade = produto.querySelector('.produto-quantidade').value;
-            if (quantidade > 0) {
-                mensagem += `${nome}: ${quantidade} unidade(s)\n`;
-            }
-        });
-
-        mensagem += `\nTotal: R$ ${document.querySelector('#TOTAL-PEDIDO span').textContent}`;
-
-        const url = `https://api.whatsapp.com/send?phone=+5535910012943&text=${encodeURIComponent(mensagem)}`;
+    whatsappButton.addEventListener('click', () => {
+        const total = totalSpan.textContent;
+        const mensagem = `Seu pedido total é: R$ ${total}`;
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     });
 
-    // Evento de clique para limpar a lista
-    document.getElementById('limpar-lista').addEventListener('click', () => {
-        document.querySelectorAll('.produto-quantidade').forEach(select => select.value = 0);
+    limparListaButton.addEventListener('click', () => {
+        produtoList.forEach(produto => {
+            const quantidadeSelect = produto.querySelector('select');
+            quantidadeSelect.value = 0;
+        });
         atualizarTotal();
     });
 
-    // Inicializar total ao carregar a página
+    // Atualiza o total ao carregar a página
     atualizarTotal();
 });
