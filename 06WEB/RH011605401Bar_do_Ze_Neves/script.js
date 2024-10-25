@@ -1,54 +1,71 @@
+// Adiciona um listener para o evento 'DOMContentLoaded', que garante que o código só será executado após o carregamento completo do DOM.
 document.addEventListener('DOMContentLoaded', () => {
-    function atualizarTotal() {
-        const produtos = document.querySelectorAll('.produto');
-        let total = 0;
 
+    // Seleciona o elemento que exibe o total do pedido.
+    const totalPedidoElement = document.querySelector('#TOTAL-PEDIDO span');
+
+    // Seleciona todos os elementos que têm o atributo 'data-preco' (produtos).
+    const produtos = document.querySelectorAll('[data-preco]');
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Seleciona o botão do WhatsApp para envio do pedido.
+    const whatsappButton = document.getElementById('whatsapp-button');
+
+    // Seleciona o botão para limpar a lista de compras.
+    const limparListaButton = document.getElementById('limpar-lista');
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Função que calcula o total do pedido.
+    function calcularTotal() {
+        let total = 0; // Inicializa a variável total como 0.
+
+        // Itera sobre cada produto para calcular o total.
         produtos.forEach(produto => {
-            const quantidade = parseInt(produto.querySelector('.produto-quantidade').value, 10);
-            const preco = parseFloat(produto.getAttribute('data-preco'));
-            const valorTotalProduto = preco * quantidade;
-            
-            // Atualizar o valor exibido do produto
-            produto.querySelector('.produto-valor').textContent = `Valor: R$ ${valorTotalProduto.toFixed(2).replace('.', ',')}`;
 
-            // Atualizar o total do pedido
-            total += valorTotalProduto;
+            // Seleciona o elemento select dentro do produto para obter a quantidade.
+            const quantidadeSelect = produto.querySelector('select');
+
+            // Obtém o preço do produto a partir do atributo 'data-preco' e o converte para um número de ponto flutuante.
+            const preco = parseFloat(produto.getAttribute('data-preco'));
+
+            // Obtém a quantidade selecionada e a converte para um número inteiro.
+            const quantidade = parseInt(quantidadeSelect.value);
+
+            // Acumula o total multiplicando o preço pela quantidade.
+            total += preco * quantidade;
         });
 
-        // Atualizar o valor total do pedido
-        document.querySelector('#TOTAL-PEDIDO span').textContent = total.toFixed(2).replace('.', ',');
+        // Atualiza o texto do elemento totalPedidoElement com o total formatado para duas casas decimais.
+        totalPedidoElement.textContent = total.toFixed(2);
     }
 
-    // Adicionar eventos de mudança para todos os seletores de quantidade
-    document.querySelectorAll('.produto-quantidade').forEach(select => {
-        select.addEventListener('change', atualizarTotal);
+    // Atualiza o total sempre que a quantidade de algum produto mudar.
+    produtos.forEach(produto => {
+        const quantidadeSelect = produto.querySelector('select');
+        // Adiciona um listener que chama a função calcularTotal quando a quantidade é alterada.
+        quantidadeSelect.addEventListener('change', calcularTotal);
     });
 
-    // Evento de clique para enviar o pedido por WhatsApp
-    document.getElementById('whatsapp-button').addEventListener('click', () => {
-        const produtos = document.querySelectorAll('.produto');
-        let mensagem = 'Pedido:\n';
+    // Enviar pedido via WhatsApp.
+    whatsappButton.addEventListener('click', () => {
+        // Cria a mensagem com o total do pedido.
+        const mensagem = `Meu pedido total é: R$ ${totalPedidoElement.textContent}`;
+        // Cria a URL do WhatsApp com a mensagem codificada.
+        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+        // Abre a URL em uma nova aba.
+        window.open(whatsappUrl, '_blank');
+    });
 
+    // Limpar lista de compras.
+    limparListaButton.addEventListener('click', () => {
+        // Itera sobre cada produto para redefinir a quantidade para 0.
         produtos.forEach(produto => {
-            const nome = produto.querySelector('h2').textContent;
-            const quantidade = produto.querySelector('.produto-quantidade').value;
-            if (quantidade > 0) {
-                mensagem += `${nome}: ${quantidade} unidade(s)\n`;
-            }
+            const quantidadeSelect = produto.querySelector('select');
+            quantidadeSelect.value = 0; // Redefine a quantidade para 0.
         });
-
-        mensagem += `\nTotal: R$ ${document.querySelector('#TOTAL-PEDIDO span').textContent}`;
-
-        const url = `https://api.whatsapp.com/send?phone=+5535910012943&text=${encodeURIComponent(mensagem)}`;
-        window.open(url, '_blank');
+        // Recalcula o total para refletir a limpeza da lista.
+        calcularTotal();
     });
-
-    // Evento de clique para limpar a lista
-    document.getElementById('limpar-lista').addEventListener('click', () => {
-        document.querySelectorAll('.produto-quantidade').forEach(select => select.value = 0);
-        atualizarTotal();
-    });
-
-    // Inicializar total ao carregar a página
-    atualizarTotal();
 });

@@ -5,7 +5,19 @@
 
 #CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
 
-.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 100%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+.CONTAINER_ITEM {margin-bottom: 20px;}
+
+.social-buttons { margin-top: 10px;}
+
+.social-button {display: inline-block;    padding: .5% 1%;    margin: 0.5%;   transform: translateY(0%);  color: white;    text-decoration: none;    border-radius: 5px;    transition: background-color 0.3s;  font-size: 50px}
+
+.facebook {background-color: #3b5998; /* Cor do Facebook */}
+
+.twitter {background-color: #1da1f2; /* Cor do Twitter */}
+
+.whatsapp {background-color: #25d366; /* Cor do WhatsApp */}
+
+.social-button:hover {opacity: 0.8; /* Efeito de hover */}
 
 #FOTO_EMPRESA { z-index: ; position: ; width: 100%; height: 100%; transform: translateY(0%)  translateX(0%)}
 
@@ -14,12 +26,12 @@
 	h4 {font-size: 120%}
 	h2 {font-size: 200%}
 
-#LOGOTIPO { z-index: 2; position: relative; width: 30%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-300%)  translateX(0%) scale(130%)}
+#LOGOTIPO { z-index: 2; position: relative; width: 30%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-470%)  translateX(0%) scale(130%)}
 
 #produto-list {z-index: 2; display: grid; gap: 50px 50px; padding: ; grid-template-columns: 100%;  transform: translateY(-3%)  translateX(0%)}
-.produto {border: 1px solid #ddd; padding: 10px; height: 800px; border-radius: 5px; text-align: center; background-color: red; font-size: 30px}
-.produto select {z-index: 3; display: inline-block; position: absolute; font-size: 200%; transform: translateY(1000%)  translateX(75%)}
-.produto h2 {margin: 10px 0; font-size: 15px}
+.produto0 {border: 1px solid #ddd; padding: 10px; height: 800px; border-radius: 5px; text-align: center; background-color: red; font-size: 30px}
+.produto0 select {z-index: 3; display: inline-block; position: absolute; font-size: 200%; transform: translateY(1000%)  translateX(75%)}
+.produto0 h2 {margin: 10px 0; font-size: 15px}
 
 .produto1 {border: 1px solid #ddd; padding: 10px; height: 800px; border-radius: 5px; text-align: center; background-color: green; font-size: 30px}
 .produto1 select {z-index: 3; display: inline-block; position: absolute; font-size: 200%; transform: translateY(1000%)  translateX(75%)}
@@ -57,9 +69,22 @@
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 1201px) {body {font-family: Bahnschrift; margin: 0; padding: 0; box-sizing: border-box;}
 
+
 #CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 50% 50%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: ; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
 
-.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 100%; height: 100%; background: white; opacity: ; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+.CONTAINER_ITEM {margin-bottom: 20px;}
+
+.social-buttons { margin-top: 10px;}
+
+.social-button {display: inline-block;    padding: .5% 1%;    margin: 0.5%;    color: white;    text-decoration: none;    border-radius: 5px;    transition: background-color 0.3s;  font-size: 15px}
+
+.facebook {background-color: #3b5998; /* Cor do Facebook */}
+
+.twitter {background-color: #1da1f2; /* Cor do Twitter */}
+
+.whatsapp {background-color: #25d366; /* Cor do WhatsApp */}
+
+.social-button:hover {opacity: 0.8; /* Efeito de hover */}
 
 #FOTO_EMPRESA { z-index: ; position: ; width: 100%; height: ; transform: translateY(0%)  translateX(0%)}
 
@@ -71,9 +96,9 @@
 #LOGOTIPO { z-index: 2; position: relative; width: 100%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-35%)  translateX(45%) scale(40%)}
 
 #produto-list {z-index: 2; display: grid; gap: 5px 5px; padding: ; grid-template-columns: repeat(5, 1fr);  transform: translateY(-45%)  translateX(0%)}
-.produto {border: 1px solid #ddd; padding: 10px; height: 200px; border-radius: 5px; text-align: center; background-color: red; font-size: 15px}
-.produto select {z-index: 3; display: inline-block; position: absolute; font-size: 15px; transform: translateY(900%)  translateX(30%)}
-.produto h2 {margin: 10px 0; font-size: 15px}
+.produto0 {border: 1px solid #ddd; padding: 10px; height: 200px; border-radius: 5px; text-align: center; background-color: red; font-size: 15px}
+.produto0 select {z-index: 3; display: inline-block; position: absolute; font-size: 15px; transform: translateY(900%)  translateX(30%)}
+.produto0 h2 {margin: 10px 0; font-size: 15px}
 
 .produto1 {border: 1px solid #ddd; padding: 10px; height: 200px; border-radius: 5px; text-align: center; background-color: green; font-size: 15px}
 .produto1 select {z-index: 3; display: inline-block; position: absolute; font-size: 15px; transform: translateY(900%)  translateX(30%)}
