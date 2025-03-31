@@ -1,0 +1,122 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------Estilo para smartphones-------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 400px) and (max-width: 1200px) {body {font-family: Brightons; margin: 0; padding: 0; box-sizing: border-box;}
+
+#CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 100%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 100%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+#FOTO_EMPRESA { z-index: ; position: ; width: 100%; height: 100%; transform: translateY(0%)  translateX(0%)}
+
+#QUADRO_DE_AVISOS { z-index: 0; position: ; float: ; width: 100%; height: auto; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 0%; margin-top: 0%; padding-rigth: ; padding-bottom: ; transform: translateY(0%)  translateX(0%); color: #28160a; font-size: 350%}
+	h1 {font-size: 300%}
+	h4 {font-size: 120%}
+	h2 {font-size: 200%}
+
+#LOGOTIPO { z-index: 2; position: relative; width: 30%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: 0%; transform: translateY(-450%)  translateX(0%) scale(100%)}
+
+.social-buttons { margin-top: 10px;}
+
+.social-button {display: inline-block;    padding: .5% 1%;    margin: 0.5%;   transform: translateY(0%);  color: white;    text-decoration: none;    border-radius: 5px;    transition: background-color 0.3s;  font-size: 45px}
+
+.facebook {background-color: #3b5998; /* Cor do Facebook */}
+
+.twitter {background-color: #1da1f2; /* Cor do Twitter */}
+
+.whatsapp {background-color: #25d366; /* Cor do WhatsApp */}
+
+.social-button:hover {opacity: 0.8; /* Efeito de hover */}
+
+#produto-list {z-index: 2; display: grid; gap: 20px; padding: 0 20px; grid-template-columns: repeat(1, 1fr);  transform: translateY(-1.2%)  translateX(0%)}
+.produto1 img {width: 80%; height: auto}
+.produto1 select {margin: 5px 0; font-size: 60px}
+.produto1 {border: 1px solid #808080; padding: 10px; border-radius: 5px; text-align: center; background-color: #fffcd5; font-size: 50px}
+.produto1 h2 {margin: 10px 0; font-size: 100px; color: #f5a98f}
+
+.produto2 img {width: 80%; height: auto}
+.produto2 select {margin: 5px 0; font-size: 60px}
+.produto2 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: white; font-size: 50px}
+.produto2 h2 {margin: 10px 0; font-size: 100px; color: #f5a98f}
+
+.produto3 img {width: 80%; height: auto}
+.produto3 select {margin: 5px 0; font-size: 60px}
+.produto3 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: #ffeafc; font-size: 50px}
+.produto3 h2 {margin: 10px 0; font-size: 100px; color: #f5a98f}
+
+.produto4 img {width: 80%; height: auto}
+.produto4 select {margin: 5px 0; font-size: 60px}
+.produto4 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: white; font-size: 50px}
+.produto4 h2 {margin: 10px 0; font-size: 100px; color: #f5a98f}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 50px} button {font-size: 32px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 5px}
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------Estilo para laptops e telas maiores-------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 1201px) {body {font-family: Brightons; margin: 0; padding: 0; box-sizing: border-box;}
+
+#CABECALHO_VENDAS {z-index: ; display: grid; position: ; float: ; grid-template-columns: 30% 70%; grid-template-rows: auto; gap: 0%; max-width: ; width: 100%; height: auto; background: ; opacity: 100%; border: ; border-radius: ; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: #3c444d; font-size: ; font-weight: bold; text-align: center; text-decoration: none;}
+
+.CONTAINER_ITEM {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-template-rows: ; gap: 0%; max-width: ; width: 70%; height: ; background: white; opacity: ; border: ; border-radius: 10px; overflow-y: ; overflow-x: ; justify-content: ; padding-top: ; padding-bottom: ; padding-rigth: ; padding-left: ; margin-top: ; margin-bottom: ; margin-rigth: ; margin-left: ; font-family: ; color: ; font-size: ; font-weight: ; text-align: ; text-decoration: ;}
+
+
+#FOTO_EMPRESA { z-index: ; position: ; width: 300%; height: 100%; transform: translateY(0%)  translateX(0%)}
+
+#QUADRO_DE_AVISOS { z-index: 0; position: ; float: ; width: ; height: ; opacity: %; background: #fdecbd; border-radius: 0px; padding-top: 0%; margin-top: 0%; padding-rigth: ; padding-bottom: ; transform: translateY(0%)  translateX(50%); color: #28160a; font-size: 150%}
+	h1 {font-size: 300%}
+	h4 {font-size: 120%}
+	h2 {font-size: 275%}
+
+#LOGOTIPO { z-index: 2; position: relative; width: 100%; height: auto; border-radius: 50%;  border: 15px solid white; margin-top: -40%; transform: translateY(-80%)  translateX(185%) scale(60%)}
+
+.social-buttons { margin-top: 10px;}
+
+.social-button {display: inline-block;    padding: .5% 1%;    margin: 0.5%;   transform: translateY(0%);  color: white;    text-decoration: none;    border-radius: 5px;    transition: background-color 0.3s;  font-size: 25px}
+
+.facebook {background-color: #3b5998; /* Cor do Facebook */}
+
+.twitter {background-color: #1da1f2; /* Cor do Twitter */}
+
+.whatsapp {background-color: #25d366; /* Cor do WhatsApp */}
+
+.social-button:hover {opacity: 0.8; /* Efeito de hover */}
+
+#produto-list {z-index: 2; display: grid; gap: 20px; padding: 0 20px;grid-template-columns: repeat(5, 1fr);  transform: translateY(-11%)  translateX(0%)}
+.produto1 img {width: 80%; height: auto}
+.produto1 select {margin: 5px 0; font-size: 20px}
+.produto1 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: #fffcd5; font-size: 15px}
+.produto1 h2 {margin: 10px 0; font-size: 35px; color: #f5a98f}
+
+.produto2 img {width: 80%; height: auto}
+.produto2 select {margin: 5px 0; font-size: 20px}
+.produto2 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: white; font-size: 15px}
+.produto2 h2 {margin: 10px 0; font-size: 35px; color: #f5a98f}
+
+.produto3 img {width: 80%; height: auto}
+.produto3 select {margin: 5px 0; font-size: 20px}
+.produto3 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: #ffeafc; font-size: 15px}
+.produto3 h2 {margin: 10px 0; font-size: 35px; color: #f5a98f}
+
+.produto4 img {width: 80%; height: auto}
+.produto4 select {margin: 5px 0; font-size: 20px}
+.produto4 {border: 1px solid #cfcfcf; padding: 10px; border-radius: 5px; text-align: center; background-color: white; font-size: 15px}
+.produto4 h2 {margin: 0px 0; font-size: 35px; color: #f5a98f}
+
+#TOTAL-PEDIDO {text-align: center; margin-top: 20px; font-size: 30px} button {font-size: 16px; padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; cursor: pointer}
+
+#whatsapp-button {background-color: #25D366; color: white}
+
+#limpar-lista {background-color: #f44336; color: white}
+
+#ENDERECO {text-align: center; font-size: 10px}
+
+}
