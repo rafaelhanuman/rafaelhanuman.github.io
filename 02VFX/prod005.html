@@ -153,120 +153,137 @@ REPORTERO 3D/CARTOON EN 3D
           <!------------------------------------------------------------------------------------------------------------------------->
           <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
           <!------------------------------------------------------------------------------------------------------------------------->
-          <div class="CONTAINER_ITEM25">
-          <script type="importmap"> { "imports": { "three": "./js/three.webgpu.js", "three/tsl": "./js/three.tsl.js", "three/nodes": "./js/three.webgpu.nodes.js", "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js" } } </script>
+          <div class="CONTAINER_ITEM25">          <!------------------------------------------------------------------------------------------------------------------------->
+          <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
+          <!------------------------------------------------------------------------------------------------------------------------->
+          <script type="importmap"> 
+          { "imports": { 
+              "three": "./js/three.webgpu.js", 
+              "three/tsl": "./js/three.tsl.js", 
+              "three/nodes": "./js/three.webgpu.nodes.js", 
+              "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js" 
+          } } 
+          </script>
 
-    <div id="loader">
-        <div class="spinner"></div>
-        <div id="loader-text">Carregando modelo 3D 'prod002.glb'...</div>
-    </div>
+          <!-- Apenas UMA div container com id específico para o motor gráfico -->
+          <div class="CONTAINER_ITEM25" id="CONTAINER_GRAFICO_3D" style="position: relative; width: 100%; height: 500px; overflow: hidden;">
 
-    <script type="module">
-        import * as THREE from 'three';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+              <div id="loader">
+                  <div class="spinner"></div>
+                  <div id="loader-text">Carregando modelo 3D 'prod002.glb'...</div>
+              </div>
 
-        const loaderText = document.getElementById('loader-text');
-        const loader = document.getElementById('loader');
-        
-        let meshGLTF; 
+              <script type="module">
+                  import * as THREE from 'three';
+                  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-        async function init() {
-            try {
-                // 1. Configuração do Cenário
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-                camera.position.set(0, 2, 5); 
+                  const loaderText = document.getElementById('loader-text');
+                  const loader = document.getElementById('loader');
+                  const container3D = document.getElementById('CONTAINER_GRAFICO_3D');
+                  
+                  let meshGLTF; 
+                  let renderer, camera, scene;
 
-                // 2. Renderizador Assíncrono WebGPU
-                const renderer = new THREE.WebGPURenderer({ antialias: true });
-                await renderer.init(); 
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                document.body.appendChild(renderer.domElement);
+                  async function init() {
+                      try {
+                          // 1. Configuração do Cenário
+                          scene = new THREE.Scene();
+                          
+                          // Proporção baseada no container real
+                          const largura = container3D.clientWidth;
+                          const altura = container3D.clientHeight;
+                          
+                          camera = new THREE.PerspectiveCamera(45, largura / altura, 0.1, 1000);
+                          camera.position.set(0, 2, 5); 
 
-                // 3. Sistema de Iluminação
-                const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
-                scene.add(ambientLight);
+                          // 2. Renderizador Assíncrono WebGPU integrado ao Container
+                          renderer = new THREE.WebGPURenderer({ antialias: true });
+                          await renderer.init(); 
+                          
+                          // Força o tamanho exato da Div correspondente
+                          renderer.setSize(largura, altura);
+                          container3D.appendChild(renderer.domElement);
 
-                const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5); 
-                directionalLight.position.set(5, 10, 7);
-                scene.add(directionalLight);
+                          // 3. Sistema de Iluminação
+                          const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
+                          scene.add(ambientLight);
 
-                // 4. Carregamento do arquivo local prod002.glb
-                const gltfLoader = new GLTFLoader();
-                
-                gltfLoader.load(
-                    './js/prod002.glb', 
-                    (gltf) => {
-                        meshGLTF = gltf.scene;
-                        
-                        // Cálculo preciso para trazer o centro exato do modelo para o ponto (0,0,0)
-                        const box = new THREE.Box3().setFromObject(meshGLTF);
-                        const center = box.getCenter(new THREE.Vector3());
-                        meshGLTF.position.x -= center.x;
-                        meshGLTF.position.y -= center.y;
-                        meshGLTF.position.z -= center.z;
+                          const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5); 
+                          directionalLight.position.set(5, 10, 7);
+                          scene.add(directionalLight);
 
-                        scene.add(meshGLTF);
+                          // 4. Carregamento do arquivo local prod002.glb
+                          const gltfLoader = new GLTFLoader();
+                          
+                          gltfLoader.load(
+                              './js/prod002.glb', 
+                              (gltf) => {
+                                  meshGLTF = gltf.scene;
+                                  
+                                  const box = new THREE.Box3().setFromObject(meshGLTF);
+                                  const center = box.getCenter(new THREE.Vector3());
+                                  meshGLTF.position.x -= center.x;
+                                  meshGLTF.position.y -= center.y;
+                                  meshGLTF.position.z -= center.z;
 
-                        // Esconde o loading verde e inicia a rotação do produto
-                        setTimeout(() => {
-                            loader.style.opacity = '0';
-                            setTimeout(() => loader.style.display = 'none', 500);
-                            animate();
-                        }, 400);
-                    },
-                    (xhr) => {
-                        if (xhr.total > 0) {
-                            const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
-                            loaderText.innerText = `Processando modelo: ${percentComplete}%`;
-                        } else {
-                            const loadedKB = Math.round(xhr.loaded / 1024);
-                            loaderText.innerText = `Carregando dados: ${loadedKB} KB transferidos`;
-                        }
-                    },
-                    (error) => {
-                        console.error('Falha interna de leitura do arquivo GLTF:', error);
-                        showError("Não foi possível processar o arquivo 'prod002.glb'. Verifique se o arquivo está na pasta raiz e sem corrupções.");
-                    }
-                );
+                                  scene.add(meshGLTF);
 
-                // 5. Loop de Renderização e Animação
-                function animate() {
-                    requestAnimationFrame(animate);
-                    if (meshGLTF) {
-                        meshGLTF.rotation.y += 0.01; 
-                    }
-                    renderer.render(scene, camera);
-                }
+                                  setTimeout(() => {
+                                      loader.style.opacity = '0';
+                                      setTimeout(() => loader.style.display = 'none', 500);
+                                      animate();
+                                  }, 400);
+                              },
+                              (xhr) => {
+                                  if (xhr.total > 0) {
+                                      const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
+                                      loaderText.innerText = `Processando modelo: ${percentComplete}%`;
+                                  } else {
+                                      const loadedKB = Math.round(xhr.loaded / 1024);
+                                      loaderText.innerText = `Carregando dados: ${loadedKB} KB transferidos`;
+                                  }
+                              },
+                              (error) => {
+                                  console.error('Falha interna de leitura do arquivo GLTF:', error);
+                                  showError("Não foi possível processar o arquivo 'prod002.glb'. Verifique se o arquivo está na pasta raiz e sem corrupções.");
+                              }
+                          );
 
-                // 6. Monitoramento de Janela Dinâmico
-                window.addEventListener('resize', () => {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                });
+                          // 5. Loop de Renderização e Animação
+                          function animate() {
+                              requestAnimationFrame(animate);
+                              if (meshGLTF) {
+                                  meshGLTF.rotation.y += 0.01; 
+                              }
+                              renderer.render(scene, camera);
+                          }
 
-            } catch (error) {
-                console.error("Erro crítico interceptado:", error);
-                showError(error.message);
-            }
-        }
+                          // 6. Monitoramento Dinâmico focado no tamanho da Div correspondente
+                          window.addEventListener('resize', () => {
+                              const novaLargura = container3D.clientWidth;
+                              const novaAltura = container3D.clientHeight;
+                              
+                              camera.aspect = novaLargura / novaAltura;
+                              camera.updateProjectionMatrix();
+                              renderer.setSize(novaLargura, novaAltura);
+                          });
 
-        function showError(message) {
-            loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO NO MOTOR GRÁFICO:</span><br><br>" + 
-                                   message + "<br><br>" +
-                                   "<small style='color:#bbb;'>Certifique-se de que criou a pasta <b>js/utils/</b> e moveu os arquivos <b>SkeletonUtils.js</b> e <b>BufferGeometryUtils.js</b> para dentro dela.</small>";
-        }
+                      } catch (error) {
+                          console.error("Erro crítico interceptado:", error);
+                          showError(error.message);
+                      }
+                  }
 
-        init();
-    </script>
+                  function showError(message) {
+                      loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO NO MOTOR GRÁFICO:</span><br><br>" + 
+                                             message + "<br><br>" +
+                                             "<small style='color:#bbb;'>Certifique-se de que criou a pasta <b>js/utils/</b> e moveu os arquivos <b>SkeletonUtils.js</b> e <b>BufferGeometryUtils.js</b> para dentro dela.</small>";
+                  }
 
-
-
-
-
-
+                  init();
+              </script>
           </div>
+
 
           <!------------------------------------------------------------------------------------------------------------------------->
           <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
