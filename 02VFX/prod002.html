@@ -85,12 +85,12 @@
                     (gltf) => {
                         meshGLTF = gltf.scene;
                         
-                        // Cálculo automático de bounding box para centralizar o modelo no meio exato da tela
+                        // Correção: Cálculo preciso de bounding box para transladar o centro do modelo para o ponto (0,0,0)
                         const box = new THREE.Box3().setFromObject(meshGLTF);
                         const center = box.getCenter(new THREE.Vector3());
-                        meshGLTF.position.x += (meshGLTF.position.x - center.x);
-                        meshGLTF.position.z += (meshGLTF.position.z - center.z);
-                        meshGLTF.position.y += (meshGLTF.position.y - center.y);
+                        meshGLTF.position.x -= center.x;
+                        meshGLTF.position.y -= center.y;
+                        meshGLTF.position.z -= center.z;
 
                         scene.add(meshGLTF);
 
@@ -105,11 +105,15 @@
                         if (xhr.total > 0) {
                             const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
                             loaderText.innerText = `Processando modelo: ${percentComplete}%`;
+                        } else {
+                            // Fallback caso o servidor não envie o cabeçalho Content-Length
+                            const loadedKB = Math.round(xhr.loaded / 1024);
+                            loaderText.innerText = `Carregando dados: ${loadedKB} KB transferidos`;
                         }
                     },
                     (error) => {
                         console.error('Falha interna de leitura do arquivo GLTF:', error);
-                        throw new Error("Não foi possível processar o arquivo 'prod002.gltf'. Verifique a integridade do arquivo.");
+                        showError("Não foi possível processar o arquivo 'prod002.gltf'. Verifique a integridade ou a existência do arquivo na pasta raiz.");
                     }
                 );
 
@@ -131,10 +135,15 @@
 
             } catch (error) {
                 console.error("Erro crítico interceptado:", error);
-                loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO NO MOTOR GRÁFICO:</span><br><br>" + 
-                                       error.message + "<br><br>" +
-                                       "<small style='color:#bbb;'>Se o erro persistir, certifique-se de que o arquivo 'prod002.gltf' está na mesma pasta raiz do 'index.html'.</small>";
+                showError(error.message);
             }
+        }
+
+        // Função auxiliar para exibir mensagens de falha na interface gráfica
+        function showError(message) {
+            loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO NO MOTOR GRÁFICO:</span><br><br>" + 
+                                   message + "<br><br>" +
+                                   "<small style='color:#bbb;'>Se o erro persistir, certifique-se de usar um servidor local (HTTP) e que o arquivo 'prod002.gltf' está na mesma pasta do 'index.html'.</small>";
         }
 
         init();
