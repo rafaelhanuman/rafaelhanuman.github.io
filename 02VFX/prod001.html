@@ -18,17 +18,18 @@
             z-index: 9999; transition: opacity 0.5s ease; color: #ffffff;
         }
         
+        /* Carregador Verde */
         .spinner {
             width: 50px; height: 50px;
             border: 5px solid #333; 
-            border-top: 5px solid #ffcc00; 
+            border-top: 5px solid #00ff66; 
             border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #ffcc00; }
+        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #00ff66; }
     </style>
 
-    <!-- Mapeamento estrito para os arquivos que estão dentro da sua pasta 'js' -->
+    <!-- Mapeamento estrito para os arquivos dentro da sua pasta 'js' -->
     <script type="importmap">
         {
             "imports": {
@@ -47,7 +48,6 @@
     </div>
 
     <script type="module">
-        // Importação nativa utilizando os mapas locais configurados acima
         import * as THREE from 'three';
 
         const loaderText = document.getElementById('loader-text');
@@ -66,9 +66,8 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 document.body.appendChild(renderer.domElement);
 
-                // 3. Criar o Cubo perfeito no centro da tela
+                // 3. Criar o Cubo no centro da tela
                 const geometry = new THREE.BoxGeometry(2, 2, 2);
-                // Utilizando MeshBasicNodeMaterial que é o padrão nativo otimizado para WebGPU
                 const material = new THREE.MeshBasicMaterial({ color: 0x00d2ff, wireframe: true });
                 const cube = new THREE.Mesh(geometry, material);
                 scene.add(cube);
@@ -88,7 +87,7 @@
                     animate();
                 }, 400);
 
-                // 5. Ajuste de Redimensionamento da Tela (Responsivo)
+                // 5. Ajuste de Redimensionamento da Tela
                 window.addEventListener('resize', () => {
                     camera.aspect = window.innerWidth / window.innerHeight;
                     camera.updateProjectionMatrix();
@@ -99,11 +98,10 @@
                 console.error("Erro capturado:", error);
                 loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>FALHA NA INICIALIZAÇÃO:</span><br><br>" + 
                                        error.message + "<br><br>" +
-                                       "<small style='color:#bbb;'>Certifique-se de usar um servidor local (Live Server / Vite) e que seu navegador possua suporte ativo a WebGPU.</small>";
+                                       "<small style='color:#bbb;'>Certifique-se de usar um servidor local (Live Server) e que seu navegador possua suporte ativo a WebGPU.</small>";
             }
         }
 
-        // Executa a aplicação
         init();
     </script>
 </body>
