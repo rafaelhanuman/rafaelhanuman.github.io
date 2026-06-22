@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js WebGPU Local</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; background-color: #111; font-family: sans-serif; }
+        canvas { display: block; width: 100vw; height: 100vh; }
+        #loader { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #111; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; color: #ffffff; }
+        .spinner { width: 50px; height: 50px; border: 5px solid #333; border-top: 5px solid #00ff66; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #00ff66; }
+    </style>
+
+    <!-- Mapeamento exato baseado na sua lista real de arquivos em 'js/' -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./js/three.webgpu.js",
+            "three/webgpu": "./js/three.webgpu.js",
+            "three/tsl": "./js/three.tsl.js",
+            "three/nodes": "./js/three.webgpu.nodes.js",
+            "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js",
+            "three/addons/controls/OrbitControls.js": "./js/OrbitControls.js",
+            "../utils/BufferGeometryUtils.js": "./js/BufferGeometryUtils.js",
+            "../utils/SkeletonUtils.js": "./js/three.webgpu.js"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <div id="loader-text">Carregando modelo 3D 'prod002.gltf'...</div>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        const loaderText = document.getElementById('loader-text');
+        const loader = document.getElementById('loader');
+
+        async function init() {
+            try {
+                // 1. Cena e Câmera
+                const scene = new THREE.Scene();
+                scene.background = new THREE.Color(0x111111);
+
+                const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+                camera.position.set(0, 2, 5);
+
+                // 2. Renderizador WebGPU
+                const renderer = new THREE.WebGPURenderer({ antialias: true });
+                if (typeof renderer.init === 'function') {
+                    await renderer.init();
+                }
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer.domElement);
+
+                // 3. Controles de Câmera (OrbitControls)
+                const controls = new OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+
+                // 4. Iluminação (Essencial para modelos GLTF)
+                const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+                scene.add(ambientLight);
+
+                const dirLight = new THREE.DirectionLight(0xffffff, 2.0);
+                dirLight.position.set(5, 10, 7);
+                scene.add(dirLight);
+
+                // 5. Carregamento do seu modelo local 'prod002.gltf'
+                const gltfLoader = new GLTFLoader();
+                
+                gltfLoader.load(
+                    './js/prod002.gltf', 
+                    (gltf) => {
+                        const model = gltf.scene;
+                        scene.add(model);
+
+                        // Centraliza e ajusta a câmera automaticamente ao redor do seu objeto
+                        const box = new THREE.Box3().setFromObject(model);
+                        const center = box.getCenter(new THREE.Vector3());
+                        const size = box.getSize(new THREE.Vector3());
+                        
+                        controls.target.copy(center);
+                        camera.position.set(center.x, center.y + size.y, center.z + size.z * 2.5);
+                        controls.update();
+
+                        // Remove a tela de loading
+                        loader.style.opacity = '0';
+                        setTimeout(() => loader.style.display = 'none', 500);
+                    },
+                    (xhr) => {
+                        if (xhr.total > 0) {
+                            const percent = Math.round((xhr.loaded / xhr.total) * 100);
+                            loaderText.innerText = `Carregando modelo: ${percent}%`;
+                        }
+                    },
+                    (error) => {
+                        throw new Error("Erro ao processar o arquivo GLTF: " + error.message);
+                    }
+                );
+
+                // 6. Loop de Animação WebGPU
+                function animate() {
+                    controls.update();
+                    renderer.render(scene, camera);
+                }
+                renderer.setAnimationLoop(animate);
+
+                // 7. Redimensionamento da Janela
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+
+            } catch (error) {
+                console.error("Erro capturado:", error);
+                loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>FALHA:</span><br><br>" + error.message + "<br><br><small style='color:#bbb;'>Abra o console (F12) para ver mais detalhes técnicos.</small>";
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
