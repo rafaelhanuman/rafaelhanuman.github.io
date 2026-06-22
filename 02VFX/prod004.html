@@ -83,7 +83,7 @@
                 gltfLoader.load(
                     './js/prod002.glb', 
                     (gltf) => {
-                        meshGLTF = gtf.scene;
+                        meshGLTF = gltf.scene;
                         
                         // Cálculo preciso para trazer o centro exato do modelo para o ponto (0,0,0)
                         const box = new THREE.Box3().setFromObject(meshGLTF);
