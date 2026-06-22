@@ -1,48 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.WebGPU - Prod001</title>
-    <link rel="stylesheet" href="../00StyleSheets/WSRHStyle25.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #111; font-family: sans-serif; }
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------1.0 CABEÇALHO DO DOCUMENTO----------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html><html dir="ltr" style="--scroll-fixed-width:1346px; --layout-width:1076px;"
+  lang="es">
+  <head class="push_notifier_supported">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Artista-Plástico Rafael Hanuman">
+    <title>
+REPORTERO 3D/CARTOON EN 3D
+    </title>
+        <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { background-color: #111; font-family: sans-serif; }
         
-        /* Ajuste do Canvas para preencher estritamente a div CONTAINER_ITEM25 */
         .CONTAINER_ITEM25 canvas { display: block; width: 100% !important; height: 100% !important; }
 
-        /* Estilo da caixa onde o 3D vai rodar */
-        .CONTAINER_ITEM25 {
-            width: 100%;
-            height: 450px; /* Você pode alterar a altura da área 3D mudando este valor */
-            background-color: #050505;
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-        }
+        .CONTAINER_ITEM25 {  width: 100%; height: 450px; background-color: #050505; position: relative; overflow: hidden; border-radius: 4px; }
 
-        /* Mini Spinner de Loading Interno exclusivo para a div */
-        .box-loader {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: #111;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            z-index: 10; transition: opacity 0.5s ease;
-        }
+        .box-loader { position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background-color: #111; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; transition: opacity 0.5s ease;  }
         
-        .spinner {
-            width: 45px; height: 45px;
-            border: 4px solid #222; 
-            border-top: 4px solid #00ff66; 
-            border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;
-        }
+        .spinner { width: 45px; height: 45px; border: 4px solid #222;  border-top: 4px solid #00ff66; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
         .loader-text { font-size: 14px; letter-spacing: 1px; color: #00ff66; text-align: center; }
     </style>
-
-    <!-- Mapeamento limpo e padronizado: As dependências internas agora resolvem nativamente pelas pastas físicas -->
-    <script type="importmap">
+        <script type="importmap">
         {
             "imports": {
                 "three": "./js/three.webgpu.js",
@@ -52,16 +35,19 @@
             }
         }
     </script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../00StyleSheets/WSRHStyle25.css">
+  </head>
+  <!------------------------------------------------------------------------------------------------------------------------->
+  <!---------------------------------------------------2.0 CORPO DO WEBSITE-------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------------->
+  <body>
     <!------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------3.0 BARRA SUPERIOR DO SITE----------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------->
     <div id="BARRASUPERIOR25">
       <div><a href="../00PerfildoAutor/WSRHPerfildoAutor.html"><img id="FOTO_PERFIL_BARRA" src="../00PerfildoAutor/images/WSRHPerfildoAutor.png" alt="RafaelHanuman Plástic Designer" title="RafaelHanuman Artista-Plástico"></a></div>
 
-      <div><a id="TELEFONE_BARRA" href="https://whatsapp.com" target="_blank">+5535910012943</a></div>
+      <div><a id="TELEFONE_BARRA" href="https://api.whatsapp.com/send?phone=+5535910012943&amp;text=Ol%C3%A1%20via%20website" target="_blank">+5535910012943</a></div>
 
       <div id="DATA_CRIACAO_SITE">Website criado en 2001.</div>
 
@@ -74,7 +60,7 @@
         <!-----------------------------------------------3.1 TRES BOTÕES DO CELULAR------------------------------------------------>
         <!------------------------------------------------------------------------------------------------------------------------->
 
-      <div><a id="BUSCA_NA_BARRA" href="../00ADMIN/WSRHLogin.html"></a><a href="https://whatsapp.com" target="_blank"><img id="BOTAO_WHATSAPP" src="../index_files/images/chamada.svg" alt="chamada" title="chamada"></a></div>
+      <div><a id="BUSCA_NA_BARRA" href="../00ADMIN/WSRHLogin.html"></a><a href="https://api.whatsapp.com/send?phone=+5535910012943&amp;text=Ol%C3%A1%20via%20website" target="_blank"><img id="BOTAO_WHATSAPP" src="../index_files/images/chamada.svg" alt="chamada" title="chamada"></a></div>
 
       <div><a href="../00MenuExterno/WSRHMenuExterno.html"><img id="BOTAO_MENUCELULAR" src="../index_files/images/menuhamburguer.svg" alt="Menu Hamburguer" title="Menu Hamburguer"></a></div>
 
@@ -89,7 +75,7 @@
         <br>
         <a href="../02VFX/WSRH20501707_Reporter3D_RUSSO.html"><img src="../index_files/images/Idioma_Russo.png" alt="RUSSO" title="RUSSO"></a><br><br>
         <br>
-        <a href="../02VFX/WSRH20501707_Reporter3D_HINDI.html"><img src="../index_files/images/Idioma_Hindi.png" alt="हinदि" title="हinदि"></a><br><br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_HINDI.html"><img src="../index_files/images/Idioma_Hindi.png" alt="हिनदि" title="हिनदि"></a><br><br>
         <br>
         <a href="../02VFX/WSRH20501707_Reporter3D_CHINES.html"><img src="../index_files/images/Idioma_Chines.png" alt="CHINES" title="CHINES"></a><br><br>
         <br>
@@ -107,7 +93,7 @@
       </div>
 
       <!------------------------------------------------------------------------------------------------------------------------->
-      <!----------------------------------------------3.2 FIM BARRA SUPERIOR DO SITE--------------------------------------------->
+      <!----------------------------------------------3.0 FIM BARRA SUPERIOR DO SITE--------------------------------------------->
       <!------------------------------------------------------------------------------------------------------------------------->
     </div>
     <br>
@@ -184,13 +170,23 @@
           <!------------------------------------------------------------------------------------------------------------------------->
           <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
           <!------------------------------------------------------------------------------------------------------------------------->
-        <div class="CONTAINER_ITEM25" data-model="./js/prod002.glb">
+          <div class="CONTAINER_ITEM25">
+              <a href="../13IlustracaoPolitica/WSRH_Reporter3D.html" id="TITDIRETORIO"><img id="IMGDIRETORIO" src="../02VFX/images/WEBWSRH_Reporter3D.png" alt="2024 . REPORTERO 3D" title="2024 . REPORTERO 3D" longdesc="2024 . REPORTERO 3D" width="100%"></a>
+          </div>
+
+          <!------------------------------------------------------------------------------------------------------------------------->
+          <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
+          <!------------------------------------------------------------------------------------------------------------------------->
+          <!------------------------------------------------------------------------------------------------------------------------->
+          <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
+          <!------------------------------------------------------------------------------------------------------------------------->
+          <div class="CONTAINER_ITEM25" data-model="./js/prod002.glb">
             <!-- Loader isolado que desaparece assim que o modelo carregar -->
             <div class="box-loader">
                 <div class="spinner"></div>
                 <div class="loader-text">Carregando Objeto 3D...</div>
             </div>
-        </div>
+
 
     <!-- Módulo Script contendo o Motor Gráfico Three.WebGPU parametrizado para a Div -->
     <script type="module">
@@ -217,12 +213,14 @@
                 const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
                 camera.position.set(0, 1.5, 4); 
 
-                // 2. Renderizador Assíncrono WebGPU atrelado à Div CONTAINER_ITEM25
-                const renderer = new THREE.WebGPURenderer({ antialias: true });
-                await renderer.init(); 
-                renderer.setSize(width, height);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-                container.appendChild(renderer.domElement);
+// 2. Renderizador Assíncrono WebGPU atrelado à Div CONTAINER_ITEM25
+const renderer = new THREE.WebGPURenderer({ antialias: true, alpha: true }); // <- Adicionado alpha: true
+await renderer.init(); 
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setClearColor(0x000000, 0); // <- Define a cor de fundo como transparente (alpha 0)
+container.appendChild(renderer.domElement);
+
 
                 // 3. Sistema de Iluminação
                 const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
@@ -303,8 +301,7 @@
 
         init();
     </script>
-            
-
+          </div>
 
           <!------------------------------------------------------------------------------------------------------------------------->
           <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
@@ -343,13 +340,6 @@
       <br>El modelo 3D está listo. La piel y el esqueleto están listos.
     </div>
   </div>
-</div>
-
-
-          <!------------------------------------------------------------------------------------------------------------------------->
-          <!--------------------------------------4.2.1.3 CONSULTE O CATALOGO DE NOVOS PRODUTOS-------------------------------------->
-          <!------------------------------------------------------------------------------------------------------------------------->
-          <div class="CONTAINER_ITEM26">
 </div>
 
 
@@ -483,6 +473,3 @@
     <!------------------------------------------------------------------------------------------------------------------------->
   </body>
 </html>
-</body>
-</html>
-
