@@ -28,14 +28,16 @@
         #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #00ff66; }
     </style>
 
-    <!-- Mapeamento unificado: Garante que o GLTFLoader local também use as dependências WebGPU da mesma pasta -->
+    <!-- Mapeamento unificado corrigido: Mapeia também as dependências internas que o GLTFLoader exige -->
     <script type="importmap">
         {
             "imports": {
                 "three": "./js/three.webgpu.js",
                 "three/tsl": "./js/three.tsl.js",
                 "three/nodes": "./js/three.webgpu.nodes.js",
-                "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js"
+                "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js",
+                "three/addons/utils/SkeletonUtils.js": "./js/SkeletonUtils.js",
+                "three/addons/utils/BufferGeometryUtils.js": "./js/BufferGeometryUtils.js"
             }
         }
     </script>
@@ -69,7 +71,7 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 document.body.appendChild(renderer.domElement);
 
-                // 3. Sistema de Iluminação (Indispensável para visualização de materiais do GLTF)
+                // 3. Sistema de Iluminação
                 const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
                 scene.add(ambientLight);
 
@@ -85,7 +87,7 @@
                     (gltf) => {
                         meshGLTF = gltf.scene;
                         
-                        // Correção: Cálculo preciso de bounding box para transladar o centro do modelo para o ponto (0,0,0)
+                        // Cálculo preciso para trazer o centro exato do modelo para o ponto (0,0,0)
                         const box = new THREE.Box3().setFromObject(meshGLTF);
                         const center = box.getCenter(new THREE.Vector3());
                         meshGLTF.position.x -= center.x;
@@ -106,14 +108,13 @@
                             const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
                             loaderText.innerText = `Processando modelo: ${percentComplete}%`;
                         } else {
-                            // Fallback caso o servidor não envie o cabeçalho Content-Length
                             const loadedKB = Math.round(xhr.loaded / 1024);
                             loaderText.innerText = `Carregando dados: ${loadedKB} KB transferidos`;
                         }
                     },
                     (error) => {
                         console.error('Falha interna de leitura do arquivo GLTF:', error);
-                        showError("Não foi possível processar o arquivo 'prod002.gltf'. Verifique a integridade ou a existência do arquivo na pasta raiz.");
+                        showError("Não foi possível processar o arquivo 'prod002.gltf'. Verifique se o arquivo está na pasta raiz e sem corrupções.");
                     }
                 );
 
@@ -139,11 +140,10 @@
             }
         }
 
-        // Função auxiliar para exibir mensagens de falha na interface gráfica
         function showError(message) {
             loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO NO MOTOR GRÁFICO:</span><br><br>" + 
                                    message + "<br><br>" +
-                                   "<small style='color:#bbb;'>Se o erro persistir, certifique-se de usar um servidor local (HTTP) e que o arquivo 'prod002.gltf' está na mesma pasta do 'index.html'.</small>";
+                                   "<small style='color:#bbb;'>Certifique-se de que os arquivos <b>SkeletonUtils.js</b> e <b>BufferGeometryUtils.js</b> também estão dentro da pasta './js/'.</small>";
         }
 
         init();
