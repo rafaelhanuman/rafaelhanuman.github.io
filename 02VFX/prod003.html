@@ -3,129 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.WebGPU Local Completo</title>
+    <title>Three.WebGPU - Prod002</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            overflow: hidden;
-            background-color: #111;
-            font-family: sans-serif;
-        }
-        canvas {
-            display: block;
-            width: 100vw;
-            height: 100vh;
-        }
-        /* Tela de Loading */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; background-color: #0d0d0d; font-family: sans-serif; }
+        canvas { display: block; width: 100vw; height: 100vh; }
+
+        /* Tela de Carregamento */
         #loader {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #111;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-            color: #ffffff;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: #0d0d0d;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            z-index: 9999; transition: opacity 0.5s ease; color: #ffffff;
         }
+        
         .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #333;
-            border-top: 5px solid #00ff66;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
+            width: 50px; height: 50px;
+            border: 4px solid #1a1a1a; 
+            border-top: 4px solid #00ff66; 
+            border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 25px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        #loader-text {
-            font-size: 16px;
-            letter-spacing: 2px;
-            text-align: center;
-            padding: 0 20px;
-            line-height: 1.5;
-            color: #00ff66;
-        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #loader-text { font-size: 14px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.6; color: #00ff66; font-weight: 500; }
     </style>
 
-    <!-- O MAPA ABAIXO CORRIGE OS ERROS 404 INTERNOS DO GLTFLOADER REDIRECIONANDO PARA SEU ARQUIVO LOCAL -->
+    <!-- Mapeamento definitivo com correção de escopo para as importações internas do GLTFLoader -->
     <script type="importmap">
-    {
-        "imports": {
-            "three": "./js/three.webgpu.js",
-            "three/webgpu": "./js/three.webgpu.js",
-            "three/tsl": "./js/three.tsl.js",
-            "three/nodes": "./js/three.webgpu.js",
-            "three/addons/utils/SkeletonUtils.js": "./js/three.webgpu.js",
-            "three/addons/utils/BufferGeometryUtils.js": "./js/three.webgpu.js",
-            "../utils/SkeletonUtils.js": "./js/three.webgpu.js",
-            "../utils/BufferGeometryUtils.js": "./js/three.webgpu.js"
+        {
+            "imports": {
+                "three": "./js/three.webgpu.js",
+                "three/tsl": "./js/three.tsl.js",
+                "three/nodes": "./js/three.webgpu.nodes.js",
+                "three/addons/loaders/GLTFLoader.js": "./js/GLTFLoader.js",
+                "three/addons/controls/OrbitControls.js": "./js/OrbitControls.js",
+                "three/addons/utils/SkeletonUtils.js": "./js/SkeletonUtils.js",
+                "three/addons/utils/BufferGeometryUtils.js": "./js/BufferGeometryUtils.js"
+            },
+            "scopes": {
+                "./js/": {
+                    "../utils/SkeletonUtils.js": "./js/SkeletonUtils.js",
+                    "../utils/BufferGeometryUtils.js": "./js/BufferGeometryUtils.js"
+                }
+            }
         }
-    }
     </script>
 </head>
 <body>
 
     <div id="loader">
         <div class="spinner"></div>
-        <div id="loader-text">Carregando módulos locais e corrigindo dependências de 'js/'...</div>
+        <div id="loader-text">Inicializando motor WebGPU...</div>
     </div>
 
     <script type="module">
         import * as THREE from 'three';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
         const loaderText = document.getElementById('loader-text');
         const loader = document.getElementById('loader');
+        
+        let meshGLTF, renderer, scene, camera, controls;
 
         async function init() {
             try {
-                // 1. Criação da Cena e Câmera
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                camera.position.z = 5;
+                // 1. Configuração de Cenário e Câmera
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color('#0d0d0d');
+
+                camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
+                camera.position.set(0, 1.5, 4.5); 
 
                 // 2. Inicialização do Renderizador WebGPU
-                const renderer = new THREE.WebGPURenderer({ antialias: true });
-                if (typeof renderer.init === 'function') {
-                    await renderer.init();
-                }
+                renderer = new THREE.WebGPURenderer({ antialias: true });
+                await renderer.init(); 
                 renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                renderer.toneMappingExposure = 1.2;
                 document.body.appendChild(renderer.domElement);
 
-                // 3. Criar o Cubo no centro da tela
-                const geometry = new THREE.BoxGeometry(2, 2, 2);
-                const material = new THREE.MeshBasicMaterial({ color: 0x00d2ff, wireframe: true });
-                const cube = new THREE.Mesh(geometry, material);
-                scene.add(cube);
+                // 3. Controle de Interação por Mouse/Touch
+                controls = new OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.05;
 
-                // 4. Loop de Animação
-                function animate() {
-                    cube.rotation.x += 0.01;
-                    cube.rotation.y += 0.01;
-                    renderer.render(scene, camera);
-                }
+                // 4. Iluminação Estúdio de Produto
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); 
+                scene.add(ambientLight);
 
-                // Oculta a interface de carregamento e engaja o loop nativo do WebGPU
-                setTimeout(() => {
-                    loader.style.opacity = '0';
-                    setTimeout(() => {
-                        loader.style.display = 'none';
-                        renderer.setAnimationLoop(animate);
-                    }, 500);
-                }, 400);
+                const keyLight = new THREE.DirectionalLight(0xffffff, 3.5); 
+                keyLight.position.set(5, 5, 4);
+                scene.add(keyLight);
 
-                // 5. Ajuste de Redimensionamento da Tela
+                const fillLight = new THREE.DirectionalLight(0xffffff, 1.5); 
+                fillLight.position.set(-5, 2, 2);
+                scene.add(fillLight);
+
+                const rimLight = new THREE.DirectionalLight(0xffffff, 2.0);
+                rimLight.position.set(0, 4, -5);
+                scene.add(rimLight);
+
+                // 5. Carregamento do Arquivo da pasta js/
+                loaderText.innerText = "Carregando 'prod002.gltf' da pasta js/...";
+                const gltfLoader = new GLTFLoader();
+                
+                gltfLoader.load(
+                    './js/prod002.gltf', 
+                    (gltf) => {
+                        meshGLTF = gltf.scene;
+                        
+                        // Auto-enquadramento e centralização do modelo 3D
+                        const box = new THREE.Box3().setFromObject(meshGLTF);
+                        const center = box.getCenter(new THREE.Vector3());
+                        const size = box.getSize(new THREE.Vector3());
+
+                        meshGLTF.position.x -= center.x;
+                        meshGLTF.position.y -= center.y;
+                        meshGLTF.position.z -= center.z;
+
+                        scene.add(meshGLTF);
+
+                        // Ajuste inteligente da distância focal baseada no tamanho do objeto
+                        const maxDim = Math.max(size.x, size.y, size.z);
+                        camera.position.z = maxDim * 2.5;
+                        controls.target.set(0, 0, 0);
+
+                        // Desativa a tela de loading de forma suave
+                        setTimeout(() => {
+                            loader.style.opacity = '0';
+                            setTimeout(() => loader.style.display = 'none', 500);
+                            animate();
+                        }, 300);
+                    },
+                    (xhr) => {
+                        if (xhr.total > 0) {
+                            const percent = Math.round((xhr.loaded / xhr.total) * 100);
+                            loaderText.innerText = `Processando: ${percent}%`;
+                        } else {
+                            const loadedKB = Math.round(xhr.loaded / 1024);
+                            loaderText.innerText = `Lendo dados: ${loadedKB} KB`;
+                        }
+                    },
+                    (error) => {
+                        console.error('Erro ao ler o arquivo GLTF:', error);
+                        showError("Não foi possível renderizar o arquivo 'prod002.gltf'. Se ele possuir texturas/binários separados, certifique-se de que estão no mesmo diretório.");
+                    }
+                );
+
+                // Tratamento de redimensionamento de janela responsivo
                 window.addEventListener('resize', () => {
                     camera.aspect = window.innerWidth / window.innerHeight;
                     camera.updateProjectionMatrix();
@@ -133,9 +160,22 @@
                 });
 
             } catch (error) {
-                console.error("Erro capturado:", error);
-                loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>FALHA NA INICIALIZAÇÃO:</span><br><br>" + error.message + "<br><br>" + "<small style='color:#bbb;'>Certifique-se de que os arquivos 'three.webgpu.js' e 'three.tsl.js' estão na pasta 'js/' e que está usando um servidor local (Live Server).</small>";
+                console.error("Erro crítico no WebGPU:", error);
+                showError(error.message);
             }
+        }
+
+        // Loop de Renderização Contínuo
+        function animate() {
+            requestAnimationFrame(animate);
+            if (controls) controls.update();
+            if (renderer && scene && camera) renderer.render(scene, camera);
+        }
+
+        // Interface Gráfica de Erro
+        function showError(message) {
+            loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold;'>ERRO DETECTADO:</span><br><br>" + 
+                                   "<span style='color:#eee; font-size:13px;'>" + message + "</span>";
         }
 
         init();
