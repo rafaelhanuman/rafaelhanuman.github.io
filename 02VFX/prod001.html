@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js 100% Local</title>
+    <title>Three.js Debug Linha por Linha</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { overflow: hidden; background-color: #111; font-family: sans-serif; }
         canvas { display: block; width: 100vw; height: 100vh; }
 
-        /* Tela de Loading */
         #loader {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
@@ -17,16 +16,17 @@
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             z-index: 9999; transition: opacity 0.5s ease; color: #ffffff;
         }
+        
         .spinner {
             width: 50px; height: 50px;
-            border: 5px solid #333; border-top: 5px solid #00d2ff;
+            border: 5px solid #333; 
+            border-top: 5px solid #ffcc00; /* Carregador Amarelo */
             border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; }
+        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #ffcc00; }
     </style>
 
-    <!-- Mapeamento para o navegador entender a importação local -->
     <script type="importmap">
         {
             "imports": {
@@ -39,36 +39,53 @@
 
     <div id="loader">
         <div class="spinner"></div>
-        <div id="loader-text">Carregando arquivos do repositório local...</div>
+        <div id="loader-text">Aguardando inicialização do script...</div>
     </div>
 
     <script type="module">
-        // Importa diretamente do arquivo local mapeado acima
-        import * as THREE from 'three';
-
-        const loader = document.getElementById('loader');
         const loaderText = document.getElementById('loader-text');
 
-        try {
-            loaderText.innerText = "Verificando componentes 3D locais...";
+        // Função auxiliar para mudar o texto na tela em tempo real
+        function debug(msg) {
+            loaderText.innerText = msg;
+            console.log("[DEBUG 3D]: " + msg);
+        }
 
-            // 1. Configurar Cena e Câmera
+        try {
+            debug("Passo 1: Tentando importar 'three' da pasta js/...");
+            import * as THREE from 'three';
+            
+            debug("Passo 2: Biblioteca importada. Criando objeto Scene...");
             const scene = new THREE.Scene();
+
+            debug("Passo 3: Criando a Câmera PerspectiveCamera...");
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            
+            debug("Passo 4: Configurando posição Z da câmera...");
             camera.position.z = 5;
 
-            // 2. Renderizador (Suporta WebGL/WebGPU automaticamente dependendo do seu build)
+            debug("Passo 5: Inicializando o WebGLRenderer...");
             const renderer = new THREE.WebGLRenderer({ antialias: true });
+            
+            debug("Passo 6: Definindo o tamanho do Renderizador...");
             renderer.setSize(window.innerWidth, window.innerHeight);
+            
+            debug("Passo 7: Anexando o canvas ao BODY do HTML...");
             document.body.appendChild(renderer.domElement);
 
-            // 3. Criar o Cubo
+            debug("Passo 8: Gerando a geometria BoxGeometry (Cubo)...");
             const geometry = new THREE.BoxGeometry(2, 2, 2);
+            
+            debug("Passo 9: Aplicando o material MeshBasicMaterial...");
             const material = new THREE.MeshBasicMaterial({ color: 0x00d2ff, wireframe: true });
+            
+            debug("Passo 10: Criando o Mesh unindo geometria e material...");
             const cube = new THREE.Mesh(geometry, material);
+            
+            debug("Passo 11: Adicionando o cubo na cena...");
             scene.add(cube);
 
-            // 4. Animação
+            debug("Passo 12: Configurando a função de loop de animação...");
             function animate() {
                 requestAnimationFrame(animate);
                 cube.rotation.x += 0.01;
@@ -76,14 +93,17 @@
                 renderer.render(scene, camera);
             }
 
-            // Oculta o loading se carregar com sucesso
+            debug("Passo 13: Tudo pronto! Removendo tela de loading...");
             setTimeout(() => {
+                const loader = document.getElementById('loader');
                 loader.style.opacity = '0';
                 setTimeout(() => loader.style.display = 'none', 500);
+                
+                // Inicia o cubo após sumir o loading
                 animate();
-            }, 500);
+            }, 800);
 
-            // 5. Ajuste de Janela
+            // Ajuste de Janela
             window.addEventListener('resize', () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
@@ -92,7 +112,9 @@
 
         } catch (error) {
             console.error(error);
-            loaderText.innerHTML = "Erro de carregamento local:<br><span style='color:#ff3333; font-size:14px;'>Verifique se o arquivo 'js/three.module.js' foi upado corretamente no GitHub.</span>";
+            loaderText.innerHTML = "<span style='color:#ff3333;'>FALHA NO PASSO ATUAL:</span><br><br>" + 
+                                   "Mensagem técnica: " + error.message + "<br><br>" +
+                                   "<small style='color:#bbb;'>Se travou no Passo 1, o arquivo 'js/three.module.js' não está no local correto do GitHub.</small>";
         }
     </script>
 </body>
