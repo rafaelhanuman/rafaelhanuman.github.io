@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js Debug Linha por Linha</title>
+    <title>Three.js Diagnóstico Avançado</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { overflow: hidden; background-color: #111; font-family: sans-serif; }
@@ -24,98 +24,85 @@
             border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        #loader-text { font-size: 16px; letter-spacing: 2px; text-align: center; padding: 0 20px; line-height: 1.5; color: #ffcc00; }
+        #loader-text { font-size: 15px; letter-spacing: 1px; text-align: center; padding: 0 20px; line-height: 1.6; color: #ffcc00; }
     </style>
-
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "./js/three.module.js"
-            }
-        }
-    </script>
 </head>
 <body>
 
     <div id="loader">
         <div class="spinner"></div>
-        <div id="loader-text">Aguardando inicialização do script...</div>
+        <div id="loader-text">Iniciando teste de arquivos locais...</div>
     </div>
 
+    <!-- Script configurado como módulo moderno -->
     <script type="module">
         const loaderText = document.getElementById('loader-text');
 
-        // Função auxiliar para mudar o texto na tela em tempo real
         function debug(msg) {
             loaderText.innerText = msg;
             console.log("[DEBUG 3D]: " + msg);
         }
 
-        try {
-            debug("Passo 1: Tentando importar 'three' da pasta js/...");
-            import * as THREE from 'three';
-            
-            debug("Passo 2: Biblioteca importada. Criando objeto Scene...");
-            const scene = new THREE.Scene();
-
-            debug("Passo 3: Criando a Câmera PerspectiveCamera...");
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            
-            debug("Passo 4: Configurando posição Z da câmera...");
-            camera.position.z = 5;
-
-            debug("Passo 5: Inicializando o WebGLRenderer...");
-            const renderer = new THREE.WebGLRenderer({ antialias: true });
-            
-            debug("Passo 6: Definindo o tamanho do Renderizador...");
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            
-            debug("Passo 7: Anexando o canvas ao BODY do HTML...");
-            document.body.appendChild(renderer.domElement);
-
-            debug("Passo 8: Gerando a geometria BoxGeometry (Cubo)...");
-            const geometry = new THREE.BoxGeometry(2, 2, 2);
-            
-            debug("Passo 9: Aplicando o material MeshBasicMaterial...");
-            const material = new THREE.MeshBasicMaterial({ color: 0x00d2ff, wireframe: true });
-            
-            debug("Passo 10: Criando o Mesh unindo geometria e material...");
-            const cube = new THREE.Mesh(geometry, material);
-            
-            debug("Passo 11: Adicionando o cubo na cena...");
-            scene.add(cube);
-
-            debug("Passo 12: Configurando a função de loop de animação...");
-            function animate() {
-                requestAnimationFrame(animate);
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-                renderer.render(scene, camera);
-            }
-
-            debug("Passo 13: Tudo pronto! Removendo tela de loading...");
-            setTimeout(() => {
-                const loader = document.getElementById('loader');
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
+        // Função assíncrona para permitir o rastreamento real do carregamento do arquivo
+        async function inicializar3D() {
+            try {
+                debug("Passo 1: Solicitando arquivo './js/three.module.js' ao servidor do GitHub...");
                 
-                // Inicia o cubo após sumir o loading
-                animate();
-            }, 800);
+                // Importação dinâmica (força o navegador a capturar o erro exato se falhar)
+                const THREE = await import('./js/three.module.js');
+                
+                debug("Passo 2: Arquivo lido com sucesso! Criando Scene...");
+                const scene = new THREE.Scene();
 
-            // Ajuste de Janela
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
+                debug("Passo 3: Criando a Câmera...");
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 5;
+
+                debug("Passo 4: Inicializando o WebGLRenderer...");
+                const renderer = new THREE.WebGLRenderer({ antialias: true });
                 renderer.setSize(window.innerWidth, window.innerHeight);
-            });
+                document.body.appendChild(renderer.domElement);
 
-        } catch (error) {
-            console.error(error);
-            loaderText.innerHTML = "<span style='color:#ff3333;'>FALHA NO PASSO ATUAL:</span><br><br>" + 
-                                   "Mensagem técnica: " + error.message + "<br><br>" +
-                                   "<small style='color:#bbb;'>Se travou no Passo 1, o arquivo 'js/three.module.js' não está no local correto do GitHub.</small>";
+                debug("Passo 5: Criando a geometria do Cubo...");
+                const geometry = new THREE.BoxGeometry(2, 2, 2);
+                const material = new THREE.MeshBasicMaterial({ color: 0x00d2ff, wireframe: true });
+                const cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+
+                debug("Passo 6: Iniciando renderização do cenário...");
+                function animate() {
+                    requestAnimationFrame(animate);
+                    cube.rotation.x += 0.01;
+                    cube.rotation.y += 0.01;
+                    renderer.render(scene, camera);
+                }
+
+                debug("Passo 7: Removendo tela de loading...");
+                setTimeout(() => {
+                    const loader = document.getElementById('loader');
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                    animate();
+                }, 800);
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+
+            } catch (error) {
+                console.error("Erro capturado:", error);
+                
+                // Exibe o motivo real na tela para sabermos o porquê do bloqueio
+                loaderText.innerHTML = "<span style='color:#ff3333; font-weight:bold; font-size:16px;'>O NAVEGADOR BLOQUEOU O ARQUIVO:</span><br><br>" + 
+                                       "<b>Mensagem do Erro:</b> " + error.message + "<br><br>" +
+                                       "<span style='color:#aaa; font-size:13px;'>Se o erro mencionar 'CORS' ou 'URL', você está abrindo o arquivo direto do seu PC dando dois cliques nele. Para funcionar no PC, precisa de um servidor local (Live Server), mas se você enviar esse código exato para o GitHub Pages ele vai rodar direto por lá!</span>";
+            }
         }
+
+        // Executa o teste
+        inicializar3D();
     </script>
 </body>
 </html>
