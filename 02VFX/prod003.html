@@ -3,64 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.WebGPU - Vitrine de Produtos</title>
+    <title>Three.WebGPU - Prod001</title>
+    <link rel="stylesheet" href="../00StyleSheets/WSRHStyle25.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #111; font-family: sans-serif; color: #ffffff; padding: 40px 20px; }
+        body { background-color: #111; font-family: sans-serif; }
+        
+        /* Ajuste do Canvas para preencher estritamente a div CONTAINER_ITEM25 */
+        .CONTAINER_ITEM25 canvas { display: block; width: 100% !important; height: 100% !important; }
 
-        /* EXEMPLO DE VITRINE EM GRID (Ajuste conforme o seu layout) */
-        .vitrine-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .produto-card {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .produto-card h3 {
-            margin-top: 15px;
-            font-size: 18px;
-            color: #00ff66;
-            letter-spacing: 1px;
-        }
-
-        /* ESTAS SÃO AS DIVS QUE ANTES TINHAM FOTOS E AGORA SÃO CONTAINERS 3D */
-        .produto-3d-box {
+        /* Estilo da caixa onde o 3D vai rodar */
+        .CONTAINER_ITEM25 {
             width: 100%;
-            height: 300px; /* Controle a altura da caixa por aqui */
+            height: 450px; /* Você pode alterar a altura da área 3D mudando este valor */
             background-color: #050505;
-            border-radius: 8px;
-            overflow: hidden;
             position: relative;
+            overflow: hidden;
+            border-radius: 4px;
         }
 
-        /* Spinner de Loading Interno para cada caixinha */
+        /* Mini Spinner de Loading Interno exclusivo para a div */
         .box-loader {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background-color: #111;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            z-index: 10; transition: opacity 0.4s ease;
+            z-index: 10; transition: opacity 0.5s ease;
         }
         
         .spinner {
-            width: 35px; height: 35px;
+            width: 45px; height: 45px;
             border: 4px solid #222; 
             border-top: 4px solid #00ff66; 
-            border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 10px;
+            border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .loader-text { font-size: 12px; color: #00ff66; text-align: center; padding: 0 10px; }
+        .loader-text { font-size: 14px; letter-spacing: 1px; color: #00ff66; text-align: center; }
     </style>
 
+    <!-- Mapeamento limpo e padronizado: As dependências internas agora resolvem nativamente pelas pastas físicas -->
     <script type="importmap">
         {
             "imports": {
@@ -73,142 +54,103 @@
     </script>
 </head>
 <body>
+    
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------3.0 BARRA SUPERIOR DO SITE----------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <div id="BARRASUPERIOR25">
+      <div><a href="../00PerfildoAutor/WSRHPerfildoAutor.html"><img id="FOTO_PERFIL_BARRA" src="../00PerfildoAutor/images/WSRHPerfildoAutor.png" alt="RafaelHanuman Plástic Designer" title="RafaelHanuman Artista-Plástico"></a></div>
 
-    <h2 style="text-align: center; margin-bottom: 40px; letter-spacing: 2px;">PRODUTOS 3D INTERATIVOS</h2>
+      <div><a id="TELEFONE_BARRA" href="https://whatsapp.com" target="_blank">+5535910012943</a></div>
 
-    <!-- GRID DE EXEMPLO: Substitua ou adapte com as suas divs atuais -->
-    <div class="vitrine-grid">
-        
-        <!-- Produto 1 -->
-        <div class="produto-card">
-            <div class="produto-3d-box" data-model="./js/prod002.glb">
-                <div class="box-loader">
-                    <div class="spinner"></div>
-                    <div class="loader-text">Carregando...</div>
-                </div>
+      <div id="DATA_CRIACAO_SITE">Website criado en 2001.</div>
+
+      <div id="DATA_ATUALIZACAO">_Última Atualización: 09/02/2025</div>
+
+      <div><a id="BUSCA_NA_BARRA" href="../00ADMIN/WSRHLogin.html"> Buscas </a></div>
+
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!-----------------------------------------------3.1 TRES BOTÕES DO CELULAR------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+      <div><a id="BUSCA_NA_BARRA" href="../00ADMIN/WSRHLogin.html"></a><a href="https://whatsapp.com" target="_blank"><img id="BOTAO_WHATSAPP" src="../index_files/images/chamada.svg" alt="chamada" title="chamada"></a></div>
+
+      <div><a href="../00MenuExterno/WSRHMenuExterno.html"><img id="BOTAO_MENUCELULAR" src="../index_files/images/menuhamburguer.svg" alt="Menu Hamburguer" title="Menu Hamburguer"></a></div>
+
+      <!------------------------------------------------------------------------------------------------------------------------->
+      <!----------------------------------------------3.2 BOTÕES IDIOMAS NO CELULAR---------------------------------------------->
+      <!------------------------------------------------------------------------------------------------------------------------->
+           <input id="menuToggle" type="checkbox"><label for="menuToggle" id="BOTAO_IDIOMAS"><img src="../index_files/images/idiomas.svg" alt="lupa" title="lupa"></label>
+
+      <!-- Menu de idiomas -->
+      <div id="BANDEIRAS_CELULAR">
+        <a href="../02VFX/WSRH20501707_Reporter3D_PORTUGUES.html"><img src="../index_files/images/Idioma_Portugues.png" alt="PORTUGUES" title="PORTUGUES"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_RUSSO.html"><img src="../index_files/images/Idioma_Russo.png" alt="RUSSO" title="RUSSO"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_HINDI.html"><img src="../index_files/images/Idioma_Hindi.png" alt="हinदि" title="हinदि"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_CHINES.html"><img src="../index_files/images/Idioma_Chines.png" alt="CHINES" title="CHINES"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_INGLES.html"><img src="../index_files/images/Idioma_Ingles.png" alt="ENGLISH" title="ENGLISH"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_ARABE.html"><img src="../index_files/images/Idioma_Arabe.png" alt="ARABI" title="ARABI"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_INDONESIO.html"><img src="../index_files/images/Idioma_Indonesio.png" alt="INDONESIO" title="INDONESIO"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D.html"><img src="../index_files/images/Idioma_Espanhol.png" alt="ESPAÑOL" title="ESPAÑOL"></a><br><br>
+        <br>
+        <a href="../02VFX/WSRH20501707_Reporter3D_FRANCES.html"><img src="../index_files/images/Idioma_Frances.png" alt="FRANÇAIS" title="FRANÇAIS"></a><br>
+
+        <a href=""><img src="../index_files/images/idiomas.svg" alt="IDIOMAS" title="IDIOMAS" longdesc="IDIOMAS"></a><br>
+      </div>
+
+      <!------------------------------------------------------------------------------------------------------------------------->
+      <!----------------------------------------------3.2 FIM BARRA SUPERIOR DO SITE--------------------------------------------->
+      <!------------------------------------------------------------------------------------------------------------------------->
+    </div>
+    <br>
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------4.0 FULLHD_GRID25---------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <div id="FULLHD_GRID25">
+      <!------------------------------------------------------------------------------------------------------------------------->
+      <!---------------------------------------------------4.1 FULLGRID_DIREITA-------------------------------------------------->
+      <!------------------------------------------------------------------------------------------------------------------------->
+      <div class="FULLHD_GRIDITEM25">
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------4.1.1 CAPA ANIMADA E FOTO PROFILE-------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <div>
+          <img id="CAPA_ANIMADA" src="../00PerfildoAutor/images/WSRHCapaAnimada.gif" alt="Capa Animada" title="Capa Animada">
+          <a href="../00PerfildoAutor/WSRHPerfildoAutor_PORTUGUES.html">
+            <img id="FOTO_PROFILE_GRANDE" src="../00PerfildoAutor/images/WSRHPerfildoAutor.png" alt="RafaelHanuman Plástic Designer" title="RafaelHanuman Artista-Plástico">
+          </a>
+          <h1 id="TIT_PROFILE"> Rafael Hanuman </h1>
+        </div>
+        <br>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <div class="CONTAINER_ITEM25" data-model="./js/prod002.glb">
+            <!-- Loader isolado que desaparece assim que o modelo carregar -->
+            <div class="box-loader">
+                <div class="spinner"></div>
+                <div class="loader-text">Carregando Objeto 3D...</div>
             </div>
-            <h3>Produto 01</h3>
         </div>
 
-        <!-- Produto 2 (Exemplo duplicado apontando para outro modelo se tiver) -->
-        <div class="produto-card">
-            <div class="produto-3d-box" data-model="./js/prod002.glb">
-                <div class="box-loader">
-                    <div class="spinner"></div>
-                    <div class="loader-text">Carregando...</div>
-                </div>
-            </div>
-            <h3>Produto 02</h3>
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------4.2.1.3 CONSULTE O CATALOGO DE NOVOS PRODUTOS-------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <div class="CONTAINER_ITEM26">
+          Consulte catálogo de nuevos proyectos
         </div>
-
+        <br>
+      </div>
     </div>
 
+    <!-- Módulo Script contendo o Motor Gráfico Three.WebGPU parametrizado para a Div -->
     <script type="module">
-        import * as THREE from 'three';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
-        // Captura todas as caixas de fotos convertidas
-        const containers = document.querySelectorAll('.produto-3d-box');
-
-        containers.forEach(async (container) => {
-            const modelPath = container.getAttribute('data-model');
-            if (!modelPath) return;
-
-            const txtLoader = container.querySelector('.loader-text');
-            const visualLoader = container.querySelector('.box-loader');
-
-            try {
-                // 1. Configuração do Cenário Individualizado
-                const scene = new THREE.Scene();
-                
-                // Dimensões extraídas diretamente do tamanho da DIV HTML
-                let width = container.clientWidth;
-                let height = container.clientHeight;
-                
-                const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-                camera.position.set(0, 1.5, 4); 
-
-                // 2. Renderizador WebGPU atrelado à DIV
-                const renderer = new THREE.WebGPURenderer({ antialias: true });
-                await renderer.init(); 
-                renderer.setSize(width, height);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-                container.appendChild(renderer.domElement);
-
-                // 3. Sistema de Iluminação
-                const ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
-                scene.add(ambientLight);
-
-                const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5); 
-                directionalLight.position.set(5, 10, 7);
-                scene.add(directionalLight);
-
-                // 4. Grupo âncora para centralização perfeita no eixo local
-                const meshGroup = new THREE.Group();
-                scene.add(meshGroup);
-
-                // 5. Carregador GLTF
-                const gltfLoader = new GLTFLoader();
-                
-                gltfLoader.load(
-                    modelPath, 
-                    (gltf) => {
-                        const model = gltf.scene;
-                        
-                        // Centralização geométrica baseada no Grupo
-                        const box = new THREE.Box3().setFromObject(model);
-                        const center = box.getCenter(new THREE.Vector3());
-                        
-                        model.position.set(-center.x, -center.y, -center.z);
-                        meshGroup.add(model);
-
-                        // Remove o loader individual da caixinha
-                        setTimeout(() => {
-                            if (visualLoader) {
-                                visualLoader.style.opacity = '0';
-                                setTimeout(() => visualLoader.remove(), 400);
-                            }
-                            animate();
-                        }, 200);
-                    },
-                    (xhr) => {
-                        if (txtLoader) {
-                            if (xhr.total > 0) {
-                                const percent = Math.round((xhr.loaded / xhr.total) * 100);
-                                txtLoader.innerText = `${percent}%`;
-                            } else {
-                                txtLoader.innerText = `${Math.round(xhr.loaded / 1024)} KB`;
-                            }
-                        }
-                    },
-                    (error) => {
-                        console.error('Erro ao ler o arquivo:', modelPath, error);
-                        if (txtLoader) txtLoader.innerHTML = "<span style='color:#ff3333;'>Erro GLTF</span>";
-                    }
-                );
-
-                // 6. Loop Assíncrono WebGPU isolado por container
-                async function animate() {
-                    requestAnimationFrame(animate);
-                    if (meshGroup) {
-                        meshGroup.rotation.y += 0.01; 
-                    }
-                    await renderer.renderAsync(scene, camera);
-                }
-
-                // 7. Redimensionamento responsivo focado na Div
-                window.addEventListener('resize', () => {
-                    width = container.clientWidth;
-                    height = container.clientHeight;
-                    camera.aspect = width / height;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(width, height);
-                });
-
-            } catch (error) {
-                console.error("Erro crítico no container:", error);
-            }
-        });
-    </script>
-</body>
-</html>
