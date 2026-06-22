@@ -116,14 +116,13 @@
                     }
                 );
 
-                // 5. Loop de Renderização e Animação Assíncrono (Obrigatório para WebGPU)
-                async function animate() {
+                // 5. Loop de Renderização e Animação
+                function animate() {
                     requestAnimationFrame(animate);
                     if (meshGLTF) {
                         meshGLTF.rotation.y += 0.01; 
                     }
-                    // CORREÇÃO: WebGPU exige processamento assíncrono do pipeline de renderização
-                    await renderer.renderAsync(scene, camera);
+                    renderer.render(scene, camera);
                 }
 
                 // 6. Monitoramento de Janela Dinâmico
