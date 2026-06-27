@@ -736,4 +736,4 @@ body {z-index: ; display: ; position: ; float: ; grid-template-columns: ; grid-t
 @media only screen and ( min-width : 6000px ) { body { background: #af00bf;}
 
 /*---------------------------------FULLHD 7000px PRETO---------------------------------*/
-@media only screen and ( min-width : 7000px ) { body { background: black;}
+@media only screen and ( min-width : 7000px ) { body { background: black;};
