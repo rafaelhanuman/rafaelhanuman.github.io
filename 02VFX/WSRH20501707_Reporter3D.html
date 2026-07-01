@@ -173,7 +173,7 @@ REPORTERO 3D/CARTOON EN 3D
         import * as BufferGeometryUtils from './reporter3D/BufferGeometryUtils.js';
         import * as SkeletonUtils from './reporter3D/SkeletonUtils.js';
 
-        const container = document.querySelector('.CONTAINER_ITEM25');
+        const container = document.querySelector('.CONTAINER_ITEM3D');
         const modelPath = container ? container.getAttribute('data-model') : null;
         const txtLoader = container ? container.querySelector('.loader-text') : null;
         const visualLoader = container ? container.querySelector('.box-loader') : null;
@@ -193,7 +193,7 @@ REPORTERO 3D/CARTOON EN 3D
                 const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
                 camera.position.set(0, 1.5, 20); 
 
-// 2. Renderizador Assíncrono WebGPU atrelado à Div CONTAINER_ITEM25
+// 2. Renderizador Assíncrono WebGPU atrelado à Div CONTAINER_ITEM3D
 const renderer = new THREE.WebGPURenderer({ antialias: true, alpha: true }); // <- Adicionado alpha: true
 await renderer.init(); 
 renderer.setSize(width, height);
