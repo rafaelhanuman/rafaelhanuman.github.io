@@ -156,7 +156,7 @@
           <!------------------------------------------------------------------------------------------------------------------------->
           <!--------------------------------------------------4.2.1.1 FOTO DA MATERIA------------------------------------------------>
           <!------------------------------------------------------------------------------------------------------------------------->
-          <div class="CONTAINER_ITEM25" data-model="./reporter3D/reporter3D.txt">
+          <div class="CONTAINER_ITEM3D" data-model="./reporter3D/reporter3D.txt">
             <!-- Loader isolado que desaparece assim que o modelo carregar -->
             <div class="box-loader">
                 <div class="spinner"></div>
@@ -171,7 +171,7 @@
         import * as BufferGeometryUtils from './reporter3D/BufferGeometryUtils.js';
         import * as SkeletonUtils from './reporter3D/SkeletonUtils.js';
 
-        const container = document.querySelector('.CONTAINER_ITEM25');
+        const container = document.querySelector('.CONTAINER_ITEM3D');
         const modelPath = container ? container.getAttribute('data-model') : null;
         const txtLoader = container ? container.querySelector('.loader-text') : null;
         const visualLoader = container ? container.querySelector('.box-loader') : null;
