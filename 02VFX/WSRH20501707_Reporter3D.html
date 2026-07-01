@@ -266,18 +266,16 @@ container.appendChild(renderer.domElement);
                 }
 
                 // 7. Redimensionamento Responsivo focado no Container
-                window.addEventListener('resize', () => {
-                    width = container.clientWidth;
-                    height = container.clientHeight;
-                    camera.aspect = width / height;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(width, height);
-                });
-
-            } catch (error) {
-                console.error("Erro crítico interceptado:", error);
-            }
-        }
+                
+// 7. Redimensionamento Responsivo focado no Container
+window.addEventListener('resize', () => {
+    width = container.clientWidth;
+    height = container.clientHeight;
+    camera.aspect = width / height;
+    ajustarCamera(); // Adicione esta linha para recalcular o zoom no celular
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+});
 
         init();
     </script>
